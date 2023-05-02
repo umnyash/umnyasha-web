@@ -1,0 +1,28 @@
+.spoiler {
+  position: relative;
+  padding: 16px 24px;
+  border: 1px solid currentColor;
+}
+
+.spoiler__heading {
+  display: inline-block;
+  list-style: none;
+  line-height: 1;
+  cursor: pointer;
+
+  &::before {
+    content: "+";
+    display: inline-block;
+    width: 1em;
+    margin: 0 4px 0 0;
+    text-align: center;
+  }
+}
+
+.spoiler__inner[open] .spoiler__heading::before {
+  content: "-";
+}
+
+.spoiler__content {
+  margin: 12px 0 0;
+}

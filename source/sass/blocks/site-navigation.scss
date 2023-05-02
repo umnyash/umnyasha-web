@@ -1,0 +1,19 @@
+.site-navigation__list {
+  display: grid;
+  margin: 0;
+  row-gap: 8px;
+}
+
+.site-navigation__link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    text-decoration: underline;
+    opacity: 0.6;
+  }
+}

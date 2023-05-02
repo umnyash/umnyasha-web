@@ -1,0 +1,34 @@
+extends layout/layout
+
+block variables
+  - var title = 'Главная страница'
+  - var pageClass = 'index-page'
+
+block content
+  main(class= pageClass)
+    nav.main-navigation
+      ul.main-navigation__list
+        li.main-navigation__item.spoiler
+          details.spoiler__inner
+            summary.spoiler__heading БЭМ
+            .spoiler__content
+              ol.site-navigation__list
+                li.site-navigation__item
+                  a.site-navigation__link(href="articles/bem/bem.html") БЭМ
+        li.main-navigation__item.spoiler
+          details.spoiler__inner
+            summary.spoiler__heading Java Script
+            .spoiler__content
+              ol.site-navigation__list
+                li.site-navigation__item
+                  a.site-navigation__link(href="articles/java-script/callback.html") Колбэки
+                li.site-navigation__item
+                  a.site-navigation__link(href="articles/java-script/error-processing.html") Обработка ошибок
+                li.site-navigation__item
+                  a.site-navigation__link(href="articles/java-script/json.html") JSON
+                li.site-navigation__item
+                  a.site-navigation__link(href="articles/java-script/promise.html") Промисы
+                li.site-navigation__item
+                  a.site-navigation__link(href="articles/java-script/async-await.html") async-await
+                li.site-navigation__item
+                  a.site-navigation__link(href="articles/java-script/fetch.html") fetch
