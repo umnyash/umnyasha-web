@@ -1,13 +1,13 @@
 extends ../../layout/layout
 
 block variables
-  - var title = 'БЭМ'
+  - var title = 'Обработка ошибок и исключений'
   - var pageClass = 'article-page'
 
 block content
   main(class= pageClass)
     article.content
-      h1 Обработка ошибок и исключений
+      h1= title
       h2 Ошибки
       p Когда возникает ошибка, JavaScript генерирует объект, содержащий её детали.
       p В JavaScript есть множество встроенных конструкторов для стандартных ошибок:
@@ -16,7 +16,7 @@ block content
         li #[code new SyntaxError(сообщение)]
         li #[code new ReferenceError(сообщение)]
         li #[code new TypeError(сообщение)]
-      p Для встроенных ошибок, свойство #[code name] – это в точности имя конструктора, а свойство #[code message] берётся из аргумента.
+      p Для встроенных ошибок, свойство #[code name] — это в точности имя конструктора, а свойство #[code message] берётся из аргумента.
       h2 Оператор "throw"
       p Оператор #[code throw] генерирует #[i исключение].
       pre #[code throw значение]
