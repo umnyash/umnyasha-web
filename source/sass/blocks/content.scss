@@ -46,4 +46,19 @@
   pre code {
     color: inherit;
   }
+
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  th {
+    width: min-content;
+  }
+
+  th,
+  td {
+    padding: 4px 16px;
+    border: 1px solid currentColor;
+  }
 }
