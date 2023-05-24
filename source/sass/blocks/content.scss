@@ -47,6 +47,20 @@
     color: inherit;
   }
 
+  strong {
+    font: inherit;
+  }
+
+  strong::before {
+    content: "!";
+    padding: 4px 4px;
+    border-radius: 2px;
+    margin: 0 0.8em 0 0;
+    font-weight: 700;
+    color: #fcfcfc;
+    background-color: #282828;
+  }
+
   table {
     border-spacing: 0;
     border-collapse: collapse;

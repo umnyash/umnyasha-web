@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Sass'
+  - var pageClass = 'article-page'
+
+block content
+  main(class= pageClass)
+    article.content
+      h1= title
+      p #[a(href='https://sass-lang.com') Официальный сайт]
+      p #[a(href='https://www.sassmeister.com') Тестирование Sass]
+      h2 Переменные
+      p #[code $переменная]
+      h2 Интерполяция
+      p #[code \#{выражение}]

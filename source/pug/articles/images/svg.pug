@@ -1,0 +1,89 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'SVG'
+  - var pageClass = 'article-page'
+
+block content
+  main(class= pageClass)
+    article.content
+      h1= title
+      h2 Использование SVG
+      p Существует несколько способов использования SVG-изображений.
+      p При подключении svg-изображения или svg-спрайта как отдельного файла, у тега #[code svg] в подключаемом файле должен быть атрибут #[code xmlns="http://www.w3.org/2000/svg"].
+      h3 Подключение с помощью тега img или в качестве фонового изображения
+      pre
+        code.
+          &lt;img src="file.svg" width="300" height="300" alt=""&gt;
+      pre
+        code.
+          background-image: url('file.svg');
+      ul
+        li Работают встроеннные стили, а скрипты – нет
+      p Эти способы подходят для статических картинок, так как не предоставляют возможности повлиять на внутренности.
+      h4 data:URI
+      p #[dfn #[abbr(title='Uniform Resource Identifier') URI]] – способ вставки изображения (или любого другого ресурса?) в закодированном виде с помощью атрибута HTML-элемента или с помощью функции в CSS:
+      pre
+        code.
+          &lt;img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 10'%3E%3Cpolygon points='0,0 11,0 5.5,10' fill='%23231f20'/%3E%3C/svg%3E" width="300" height="300" alt=""&gt;
+      pre
+        code.
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 10'%3E%3Cpolygon points='0,0 11,0 5.5,10' fill='%23231f20'/%3E%3C/svg%3E");
+      ul
+        li Минимизация запросов к серверу
+      p #[a(href='https://yoksel.github.io/url-encoder/ru') URL-encoder for SVG]
+      h3 Подключение с помощью iframe или object
+      pre
+        code.
+          &lt;iframe src="file.svg" width="300" height="300"&gt;&lt;/iframe&gt;
+      pre
+        code.
+          &lt;object data="file.svg" type="image/svg+xml" width="300" height="300"&gt;&lt;/object&gt;
+      ul
+        li Работают встроенные стили и скрипты
+        li Можно управлять из JavaScript
+      p Эти способы подходят для отображения интерактивных SVG.
+      p #[strong Подключение с помощью #[code iframe] идеологически неверно, так как #[code iframe] предназначен для встраивания HTML в HTML.]
+      h3 Подключение с помощью embed
+      pre
+        code.
+          &lt;embed src="file.svg" width="300" height="300"&gt;
+      h3 Вставка svg-кода в разметку
+      pre
+        code.
+          &lt;body&gt;
+            ...
+            &lt;svg width="300" height="300" role="img" aria-label="Описание."&gt;
+              ...
+            &lt;/svg&gt;
+            ...
+          &lt;/body&gt;
+      ul
+        li Полный контроль над SVG, так как это часть DOM
+      p Если встраиваемое svg-изображение является контентным, то ему стоит задать атрибуты #[code role="img"] и #[code aria-label="Описание."], чтобы скринридеры воспринимали его как обычный тег #[code img]. В ином случае, изображение можно от них скрыть атрибутом #[code aria-hidden="true"].
+      h3 Символьные svg-спрайты
+      p В SVG есть особый тег #[code &lt;symbol&gt;]. Этот тег не рендерится на странице, и нужен для того, чтобы объявлять символы, которые будут использоваться позднее.
+      p У каждого символа должны быть атрибуты #[code id] и #[code viewbox], не должно быть атрибутов #[code width], #[code height].
+      p Воспользоваться символом можно с помощью тега #[code use] с атрибутом #[code href="#id_символа"].
+      p Пример:
+      pre
+        code.
+          &lt;body&gt;
+            ...
+            &lt;!-- Спрайт --&gt;
+            &lt;svg&gt;
+              &lt;symbol id="ball" viewBox="0 0 16 16"&gt;
+                &lt;circle r="8" cx="8" cy="8"&gt;&lt;/circle&gt;
+              &lt;/symbol&gt;
+            &lt;/svg&gt;
+            ...
+            &lt;!-- Иконка --&gt;
+            &lt;svg width="16" height="16" aria-hidden="true"&gt;
+              &lt;use href="#ball"&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+            ...
+          &lt;/body&gt;
+      p #[strong Внешний SVG-спрайт не загружается с другого домена (или локально в HTML-файле), то есть работает только при использовании сервера]
+      p #[strong При использовании внешнего SVG-спрайта управление вложенными в SVG-изображение фигурами ограниченно: можно только задавать свойства тегу #[code svg], чтобы вложенные фигуры их унаследовали. Если фигуры имеют атрибуты, например, #[code fill], то переопределить его через наследование от #[code svg] не получится.]
+      h2 SVG
+      p #[strong Медиазапросы связанные с шириной (а может и все?) и написанные внутри #[code svg], вычисляются не от ширины вьюпорта, а от ширины svg-изображения].

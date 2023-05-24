@@ -1,0 +1,42 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Медиа-запросы'
+  - var pageClass = 'article-page'
+
+block content
+  main(class= pageClass)
+    article.content
+      h1= title
+      p #[i Медиа-запросы] позволяют применить стили в зависимости от характеристик браузера.
+      p Синтаксис:
+      pre
+        code.
+          @media (условие) {
+            ...
+          }
+      h2 Характеристики
+      p Современные устройства имеют множество характеристик.
+      p Примеры характеристик:
+      ul
+        li #[code min-resolution: 2dppx] — минимальная плотность пикселей от #[code 2dppx]
+        li #[code min-width: 1024px] — минимальная ширина вьюпорта #[code 1024px]
+        li #[code width: 1024px] — ширина вьюпорта #[code 1024px]
+        li #[code max-width: 1024px] — максимальная ширина вьюпорта #[code 1024px]
+        li #[code min-height: 1024px] — минимальная высота вьюпорта #[code 1024px]
+        li #[code height: 1024px] — высота вьюпорта #[code 1024px]
+        li #[code max-height: 1024px] — максимальная высота вьюпорта #[code 1024px]
+      h2 Операторы
+      p Медиавыражения поддерживают логические операторы #[code and] и #[code or].
+      p Пример использования #[code and]:
+      pre
+        code.
+          @media (min-width: 768px) and (max-width: 1024px) {
+            ...
+          }
+      p Запись условий через запятую равнозначна ипользованию #[code or]:
+      pre
+        code.
+          @media (max-width: 1024ppx), (min-resolution: 2dppx) {
+            ...
+          }
