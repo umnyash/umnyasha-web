@@ -1,0 +1,36 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Unicode-символы'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p В стандарте кодирования Unicode представлены знаки почти всех письменных языков, а также разные специальные символы.
+      p Многие их них непросто набрать на клавиатуре, а некоторые зарезервированы в HTML, то есть браузер считает их HTML кодом. Например, любой текст после знака #[b &lt;] («меньше») браузер будет пытаться интерпретировать как тег и на странице не отобразит.
+      p В разметке возможно написать любые символы Unicode в числовом обозначении (HTML-коды), или используя символы-мнемоники.
+      p Числовые коды запомнить сложно, а мнемоники — это буквенные коды, имеющие человекопонятное значение. Каждая мнемоника начинается с амперсанда (#[b &]) и заканчивается точкой с запятой (#[b ;]).
+      p Примеры Unicode-символов:
+      pre
+        code.
+          &amp;#169;    &amp;copy;    ©
+          &amp;#945;    &amp;alpha;   α
+          &amp;#182;    &amp;para;    ¶
+      p Например, знак #[b &lt;] на страницу можно вставить мнемоникой #[b &amp;lt;] (less than), а знак #[b &gt;] мнемоникой #[b &amp;gt;] (greater than).
+      pre
+        code.
+          &amp;lt;ul&amp;gt;&amp;lt;/ul&amp;gt;
+      figure
+        | &lt;ul&gt;&lt;/ul&gt;
+      p Юникод-символы могут быть использованы в стилях с помощью своих CSS-кодов, например, в качестве значений свойства #[b content]:
+      pre
+        code.
+          .rub::after {
+            content: "\20BD"; /* использован символ рубля */
+          }
+      ul
+        li #[a(href='https://unicode-table.com/ru' target='_blank' rel='nofollow noopener') Таблица символов Юникода].
+        li #[a(href='https://dev.w3.org/html5/html-author/charref' target='_blank' rel='nofollow noopener') Полный список мнемоник].
+        li #[a(href='https://copypastecharacter.com' target='_blank' rel='nofollow noopener') Специальный сервис, где можно найти и скопировать нужный символ].

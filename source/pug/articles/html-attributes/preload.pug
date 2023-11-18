@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Атрибут preload'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Атрибут #[b preload] задаёт режим предзагрузки аудио или видео и имеет 3 возможных значения:
+      ul
+        li #[b none] — не загружать ничего.
+        li #[b metadata] — загрузить служебную мета-информацию (длительность и т.п.).
+        li #[b auto] — загрузить весь файл.

@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег small'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;small&gt;&lt;/small&gt;] представляет собой побочный комментарий, такой как мелкий шрифт. Мелкий шрифт обычно содержит заявление об отказе от ответственности, предостережения, юридические ограничения или авторские права. Мелкий шрифт также иногда используется для указания авторства или для выполнения лицензионных требований.
+      p Пример:
+      pre
+        code.
+          &lt;dl&gt;
+            &lt;dt&gt;Одноместный номер&lt;/dt&gt;
+            &lt;dd&gt;2000 руб. &lt;small&gt;НДС не включён, завтрак включён&lt;/small&gt;&lt;/dd&gt;
+          &lt;/dl&gt;

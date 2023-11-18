@@ -1,0 +1,19 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'CSS-колонки'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p CSS-колонки — замечательная возможность, позволяющая разбить блок с текстом на несколько колонок. Обычно очень длинные строки сложно читать. Чтобы сэкономить место на экране, но при этом сделать текст читабельным, можно разбить один сплошной блок текста на несколько колонок, как это делается в газетах.
+      p Неважно, какие элементы находятся внутри блока, который вы превращаете в многоколоночный контейнер, все элементы остаются в обычном потоке, но разбиваются на колонки.
+      ul
+        li #[a(href='../css-properties/column-count.html') column-count] — количество колонок.
+        li #[a(href='../css-properties/column-width.html') column-width] — минимальная ширина колонок.
+        li #[a(href='../css-properties/columns.html') columns] — составное свойство (count width).
+        li #[a(href='../css-properties/column-gap.html') column-gap] — промежуток между колонками.
+        li #[a(href='../css-properties/column-rule.html') column-rule] — разделительная линия между колонками.
+        li #[a(href='../css-properties/column-span.html') column-span] — охват колонок.

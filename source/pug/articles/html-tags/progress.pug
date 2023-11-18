@@ -1,0 +1,19 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег progress'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;progress&gt;&lt;/progress&gt;] предназначен для визуализации прогресса выполнения задачи. Имеет два основных атрибута: #[b value] — текущее значение, и #[b max] — максимально возможное значение. Если максимальное значение не задано, текущее можно указывать в виде десятичной дроби от #[b 0] до #[b 1].
+      p Пример:
+      pre
+        code.
+          Прогресс: &lt;progress max="100" value="10"&gt;10%&lt;/progress&gt;
+      figure
+        | Прогресс: #[progress(max="100" value="10") 10%]
+      p Если атрибут #[b value] не задан, по умолчанию полоска прогресса будет перемещаться от одного края к другому, показывая, что система ожидает данных.
+

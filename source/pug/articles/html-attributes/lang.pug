@@ -1,0 +1,19 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Атрибут lang'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p В атрибуте #[b lang] (сокращение от английского «language») задаётся язык документа или его отдельной части. С помощью него браузер определяет язык содержимого HTML-страницы. Благодаря этому со страницей может корректно работать браузерный переводчик или программа для голосового чтения содержимого.
+      p Атрибут #[b lang] можно задавать любым тегам, если нужно уточнить, на каком языке написан текст внутри тега. Но если задать его тегу #[b &lt;html&gt;&lt;/html&gt;], то действие атрибута распространится на весь документ целиком.
+      p Примеры:
+      pre
+        code.
+          &lt;html lang="ru"&gt;&lt;/html&gt; &lt;!-- Русский язык --&gt;
+          &lt;html lang="en"&gt;&lt;/html&gt; &lt;!-- Английский язык --&gt;
+      p #[a(href='https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry' target='_blank' rel='nofollow noopener') Коды языков].
+      p У W3C есть небольшая #[a(href='https://www.w3.org/International/questions/qa-lang-why.ru' target='_blank' rel='nofollow noopener') статья] о том, зачем использовать атрибут языка.

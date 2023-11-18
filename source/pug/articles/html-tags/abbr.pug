@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег abbr'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;abbr&gt;&lt;/abbr&gt;] указывает, что последовательность символов является аббревиатурой. С помощью атрибута #[a(href='../html-attributes/title.html') title] даётся расшифровка сокращения.
+      pre
+        code.
+          Язык &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; отвечает за структуру и содержание страницы.
+      p Поисковые системы индексируют полнотекстовый вариант сокращения, что может использоваться для повышения рейтинга документа.
+      p Тексту внутри #[b &lt;abbr&gt;&lt;/abbr&gt;] браузеры добавляют пунктирное подчёркивание.

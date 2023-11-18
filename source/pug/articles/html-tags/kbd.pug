@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег kbd'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;kbd&gt;&lt;/kbd&gt;] представляет собой ввод пользователя, например с клавиатуры или с помощью голосовых команд.
+      p Пример:
+      pre
+        code.
+          Чтобы перезарядить оружие нажмите &lt;kbd&gt;R&lt;/kbd&gt;.
+      p Эти элементы по умолчанию отображаются моноширинным шрифтом.

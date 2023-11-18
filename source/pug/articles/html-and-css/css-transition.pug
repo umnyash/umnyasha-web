@@ -1,0 +1,26 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'CSS-переходы'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p CSS transition (CSS-переходы) позволяют плавно менять исходное значение CSS-свойства на новое вместо мгновенного переключения.
+      ul
+        li #[a(href='../css-properties/transition-property.html') transition-property] — свойства, к которым будет применён переход.
+        li #[a(href='../css-properties/transition-duration.html') transition-duration] — длительность.
+        li #[a(href='../css-properties/transition-timing-function.html') transition-timing-function] — темп.
+        li #[a(href='../css-properties/transition-delay.html') transition-delay] — задержка перед началом перехода.
+        li #[a(href='../css-properties/transition.html') transition] — составное свойство (property duration timing-function delay).
+      p Чтобы обозначить плавный переход, достаточно задать его длительность:
+      pre
+        code.
+          transition-duration: 300ms;
+      p Для разных свойств можно задавать разные параметры перехода. Для этого параметры нужно перечислить через запятую в том же порядке, что и названия свойства:
+      pre
+        code.
+          transition-property: width, height;
+          transition-duration: 1s, 5s; /* Ширина меняется за 1 секунду, высота — за 5. */

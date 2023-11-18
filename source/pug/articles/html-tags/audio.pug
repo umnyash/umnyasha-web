@@ -1,0 +1,30 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег audio'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;audio&gt;&lt;/audio&gt;] предназначен для вставки аудио.
+      h3 Основные атрибуты
+      ul
+        li #[b src] — адрес аудиофайла.
+        li #[b controls] — добавляет панель управления проигрывателем.
+        li #[b autoplay] — при наличии этого атрибута воспроизведение аудио начинается автоматически.
+        li #[a(href='../html-attributes/preload.html') preload] — режим предзагрузки аудио.
+      h3 Форматы и источники аудио
+      p Для охвата большинства современных браузеров, достаточно использовать всего 2 формата:
+      ul
+        li MP3.
+        li OGG.
+      p Поскольку в атрибуте #[b src] тега #[b &lt;audio&gt;&lt;/audio&gt;] можно указать адрес только одного аудиофайла, необходимо использовать теги #[b &lt;source&gt;].
+      pre
+        code.
+          &lt;audio controls&gt;
+            &lt;source src="sound.mp3" type="audio/mpeg"&gt;
+            &lt;source src="sound.oga" type="audio/ogg"&gt;
+          &lt;/audio&gt;
+

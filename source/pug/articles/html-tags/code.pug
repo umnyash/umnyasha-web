@@ -1,0 +1,26 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег code'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p С помощью тега #[b &lt;code&gt;&lt;/code&gt;] размечается любой фрагмент текста, который распознаётся компьютером: код программы, разметки, названия файлов и другое. Обычно браузеры отображают текст в теге #[b &lt;code&gt;&lt;/code&gt;] моноширинным шрифтом.
+      p Пример:
+      pre
+        code.
+          Тег &lt;code&gt;&amp;lt;ul&amp;gt;&amp;lt;/ul&amp;gt;&lt;code&gt; — это неупорядоченный список.
+      figure
+        | Тег #[code &lt;ul&gt;&lt;/ul&gt;] — это неупорядоченный список.
+      p Какого-то специального способа указать на каком языке написан фрагмент кода, у тега #[b &lt;code&gt;&lt;/code&gt;] нет.
+      p #[strong Тег #[b &lt;code&gt;&lt;/code&gt;] можно вкладывать внутрь тега #[b &lt;pre&gt;&lt;/pre&gt;], а наоборот делать нельзя.]
+      pre
+        code.
+          &lt;pre&gt;&lt;code&gt;
+            if (a &gt; b) {
+              console.log("Hello!");
+            }
+          &lt;/code&gt;&lt;/pre&gt;

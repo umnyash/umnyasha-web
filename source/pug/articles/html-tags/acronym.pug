@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег acronym'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;acronym&gt;&lt;/acronym&gt;] указывает на то, что текст является акронимом. В отличие от аббревиатуры, акроним — это устоявшееся сокращение, которое применяется как самостоятельное слово. К акронимам, например, можно отнести следующие слова: СПИД, ликбез, замполит, США, DOS и др.
+      p По умолчанию, текст, заключённый в контейнере #[b &lt;acronym&gt;&lt;/acronym&gt;], подчёркивается пунктирной линией.

@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег aside'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;aside&gt;&lt;/aside&gt;] включает в себя дополнительное содержание, не связанное напрямую с основным.
+      pre
+        code.
+          &lt;aside&gt;
+            Я скромный блок с курсами валют на сайте про рыбок.
+          &lt;/aside&gt;

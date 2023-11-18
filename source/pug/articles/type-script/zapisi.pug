@@ -1,0 +1,260 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Записи'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      h2 Полезные сервисы
+      p #[a(href='https://www.typescriptlang.org/play' target='_blank' rel='nofollow noopener') Песочница TypeScript] – конвертер TypeScript в JavaScript
+      p #[a(href='https://github.com/cesalberca/katas' target='_blank' rel='nofollow noopener') Katas] – сборник задач по TypeScript который улучшит мышление типами.
+      p #[a(href='https://transform.tools' target='_blank' rel='nofollow noopener') transform.tools] – конвертер кода
+
+      h2 Многие операции, применяемые к объектам и массивам, можно применять и типам
+      pre
+        code.
+          type Role = {
+            title: string;
+            isAdmin: boolean;
+          }
+
+          type User = {
+            name: string;
+            roles: Role[];
+          }
+
+          // 1. Обращаемся по индексу в типе
+          type InferType = User['roles']; // Role[]
+
+          // 2. Вычисляем название ключа динамически
+          const propertyName = 'roles';
+          type InferType2 = User[typeof propertyName]; // Role[]
+
+          // 3. Вычисляем тип на основании элемента массива
+          type InferType3 = User['roles'][number] // Role
+
+          // 4. Union на основании значений массива
+          const fruit = ['orange', 'banana', 'apple'] as const;
+          type Fruit = typeof fruit[number]; // 'orange' | 'banana' | 'apple'
+          const someFruit: Fruit = 'apple'; // Ok
+          const someFruit2: Fruit = 'cucumber'; // Error
+
+      h2 Сужение информации о типе
+      pre
+        code.
+          // 1. Сужение типов с примитивами
+          function printData(data: string | number) {
+            if (typeof data === 'string') {
+              return data.toUpperCase();
+            }
+
+            return data + 9;
+          }
+
+          console.log(printData('Rusik'));
+          console.log(printData(11));
+
+          // 2. Сужение типов с объектами
+          type User = {
+            age: number;
+            role: 'user';
+          }
+
+          type Admin = {
+            age: number;
+            role: 'admin';
+            secret: string;
+          }
+
+          function printData(data: User | Admin): void {
+            console.log(data.age);
+
+            if (data.role === 'admin') {
+              console.log(data.secret);
+            }
+          }
+
+          printData({ age: 33, role: 'user' });
+          printData({ age: 33, role: 'admin', secret: 'umnyash' });
+
+          // 3. TypeGuard – функция-предикат
+          // Функция-предикат – функция, которая возвращает либо true, либо false
+
+          function isAdmin(user: Admin | User): user is Admin {
+            return user.role === 'admin';
+          }
+
+          function printData(data: User | Admin): void {
+            console.log(data.age);
+
+            if (isAdmin(data)) {
+              console.log(data.secret);
+            }
+          }
+
+          // Ещё одна функция TypeGuard, но основывается не на проверке значения свойства role,
+          // а на проверке значения свойства secret
+
+          function isAdmin2(user: Admin | User): user is Admin {
+            return (user as Admin).secret !== undefined;
+          }
+
+          function printData(data: User | Admin): void {
+            console.log(data.age);
+
+            if (isAdmin2(data)) {
+              console.log(data.secret);
+            }
+          }
+
+      h2 Record – тип любого объекта
+      pre
+        code.
+          function getProperty(someObject: Record&lt;string, unknown&gt;, propertyName: string) {
+            return someObject[propertyName];
+          }
+          // Record&lt;string, unknown&gt; – структура в которой свойства строковые, а значения типа unknown
+
+      h2 Дженерики – это как бы параметры, в которые можно передать тип значения
+      pre
+        code.
+          type User = {
+            name: string,
+            age: number
+          }
+
+          const teacher: User = {
+            name: 'Igor',
+            age: 37
+          }
+
+          // keyof вовзвращает список всех ключей типа
+          // type UserKeys = keyof User; // Теперь в UserKeys находятся все ключи, которые есть в типе User
+          // В данном примере keyof User эквивалентно объединению name | age
+
+          // U extends keyof T означает, что тип U является подмножетсвом типа keyof T (списка всех ключей типа T)
+          function getProperty&lt;T, U extends keyof T&gt;(someObject: T, propertyName: U) {
+            return someObject[propertyName];
+          }
+
+          console.log(getProperty(teacher, 'name')); // Ok
+          console.log(getProperty(teacher, 'age')); // Ok
+          console.log(getProperty(teacher, 'role')); // Error
+          console.log(getProperty({ title: 'Hello World!'}, 'title')); // Ok
+
+          // Если дженерик не передан, то он определяется на основании типа значения переменной, для которой он предназначен.
+      h2 Перегрузка функций (когда имена и параметры функций одинаковые, но работают с аргументами разных типов)
+      pre
+        code.
+          type User = {
+            id: null,
+            name: string
+          }
+
+          type Admin = {
+            id: string,
+            name: string,
+            secret: string
+          }
+
+          function createUser(id: string, name: string): Admin;
+          function createUser(id: null, name: string): User;
+
+          function createUser(id: null | string, name: string): User | Admin {
+            if (id === null) {
+              return { id, name }
+            }
+
+            return { id, name, secret: '2ew2' }
+          }
+
+          const result = createUser(null, 'Igor');
+          const result2 = createUser(crypto.randomUUID(), 'Igor');
+
+      p Браузер умеет работать с криптографией, у него есть криптографические функции. Эти функции называются crypto API. В объекте Window доступен объект crypto, который мы можем использовать.
+      p Как типизировать Object.assign? Использовать перегрузки, последняя вохзвращала бы any и типизации конец
+      h2 Conditional Types - условные типы
+      pre
+        code.
+          type User = {
+            id: null,
+            name: string
+          }
+
+          type Admin = {
+            id: string,
+            name: string,
+            secret: string
+          }
+
+          type UserOrAdmin&lt;T extends null | string&gt; = T extends null ? User : Admin;
+
+          function createUser&lt;T extends null | string&gt;(id: T, name: string): UserOrAdmin&lt;T&gt; {
+            if (id === null) {
+              return { id, name } as UserOrAdmin&lt;T&gt;;
+            }
+
+            return { id, name, secret: '2ew2' } as UserOrAdmin&lt;T&gt;;
+          }
+
+          const result = createUser(null, 'Igor');
+          const result2 = createUser(crypto.randomUUID(), 'Igor');
+      h2 Пакет ts-reset
+      p Улучшает... #[a(href='https://github.com/total-typescript/ts-reset' target='_blank') Ссылка]
+      p Без него при парсинге JSON возвращается значение с типом any, а с ним с типом unknown.
+      h2 Типы any и unknown
+      p any нужно избегать, вместо него можно использовать unknown
+      p unknown
+      pre
+        code.
+          let user: any;
+          user = 1;
+          user = 'Hello world';
+          const result: string = user; // Ok
+
+          let user2: unknown;
+          user2 = 1;
+          user2 = 'Hello world';
+          const result2: string = user2; // Ошибка, значение переменной user типа unknown не соотвествует типу string
+          const result3: string = (user2 as string); // Ok (1)
+      p (1) В этом преимущество типа unknown. В отличие от any не TypeScript всё разрешает, а можно самим принимать решения.
+      h3 Где встречается unknown
+      pre
+        code.
+          try {
+            throw new Error('Oops')
+          } catch (error) { // В переменную error попадает значение с типом unknown, ведь выбросить можно не только объект ошибки, но и всё что угодно
+            console.log(error.message) // Error, y unknown может не быть свойств
+
+            if (error instanceof Error) { // сужение типа
+              console.log(error.message) // Ok
+            }
+          }
+      p unknown для этого и создан. Когда мы работаем с какими-то значениями из источника, который мы не знаем точно, что он может вернуть, то мы должны использовать unknown и потом использовать сужение типа.
+      p Можно использовать TypeGuard:
+      pre
+        code.
+          function isError(error: unknown): error is Error {
+            return error instanceof Error;
+          }
+
+          try {
+            throw new Error('Oops')
+          } catch (error) { // В переменную error попадает значение с типом unknown, ведь выбросить можно не только объект ошибки, но и всё что угодно
+            if (isError(error)) { // сужение типа
+              console.log(error.message) // Ok
+            }
+          }
+      h3 Где встречается unknown (второй случай)
+      pre
+        code.
+          const data = JSON.parse('{ "name": "Igor" }') as unknown;
+          if (typeof data === 'object' && data !== null && 'name' in data) { // null – это тоже объект
+            console.log(data.name)
+          }
+      h3 key
+      p Свойство Key используется для оптимизации рендеринга списков. Реакт запоминает ключ каждого элемента и когда мы изменяем список, то он смотрит на ключи, какие ключи пропали из массива. Если все ключи остались такими же как до взаимодействия с массивом, то он не перерисовывает элемент заново
+

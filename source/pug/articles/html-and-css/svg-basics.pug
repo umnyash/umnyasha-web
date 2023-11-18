@@ -1,0 +1,11 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Основы SVG'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Медиазапросы связанные с шириной и написанные внутри #[b &lt;svg&gt;&lt;/svg&gt;], вычисляются не от ширины вьюпорта, а от ширины svg-изображения.

@@ -1,0 +1,21 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег dfn'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;dfn&gt;&lt;/dfn&gt;] определяет термин, при этом непосредственный родитель этого тега (например, параграф), также должен относиться к термину и расшифровывать его значение.
+      p Обычно используется в сочетании с #[a(href='abbr.html') &lt;abbr&gt;&lt;/abbr&gt;] — тегом для аббревиатур. Для этих тегов атрибут #[a(href='../html-attributes/title.html') title] выступает в значении «расшифровка», а #[b id] может связывать ссылкой якорем с расшифровкой внутри материала.
+      p Пример:
+      pre
+        code.
+          &lt;p&gt;Как мы уже знаем, &lt;dfn id="html"&gt;&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;&lt;/dfn&gt; &mdash; это язык для вёрстки веб-страниц.&lt;/p&gt;
+
+          &lt;!-- ... дальше по тексту: ... --&gt;
+
+          &lt;p&gt;Используя язык &lt;a href="#html"&gt;&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;&lt;/a&gt; мы формируем содержание и структуру сайтов.&lt;/p&gt;
+

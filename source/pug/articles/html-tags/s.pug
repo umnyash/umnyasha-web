@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег s'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;s&gt;&lt;/s&gt;] (сокращение от «strike») предназначен для разметки информации, которая важна, которая является частью контента, но больше не актуальна.
+      p Например, старая цена зачёркнута и вписана новая цена, старая дата зачёркнута, а новая вписана, и так далее.
+      pre
+        code.
+          &lt;s&gt;1200 рублей&lt;/s&gt;
+          &lt;b&gt;999 рублей&lt;/b&gt;

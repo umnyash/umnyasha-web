@@ -1,0 +1,29 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Ширина и высота элементов'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Ширина и высота элементов задаются с помощью свойств #[b width] и #[b height].
+      p Пример:
+      pre
+        code.
+          width: 200px;
+          height: 100px;
+      p При этом задаются не общие ширина и высота блока, а только ширина и высота его содержания. Общие размеры затем складываются из трёх компонентов: ширины и высоты содержания, внутренних отступов и ширины рамок.
+      p Изменить алгоритм  расчёта ширины и высоты можно с помощью свойства #[a(href='../css-properties/box-sizing.html') box-sizing].
+      p Вернуть значения по умолчанию можно с помощью значения #[b auto]:
+      pre
+        code.
+          width: auto;
+          height: auto;
+      p Максимальные и минимальные размеры задаются следующими свойствами:
+      ul
+        li #[a(href='../css-properties/min-width.html') min-width] — минимальная ширина.
+        li #[a(href='../css-properties/max-width.html') max-width] — максимальная ширина.
+        li #[a(href='../css-properties/min-height.html') min-height] — минимальная высота.
+        li #[a(href='../css-properties/max-height.html') max-height] —  максимальная высота.

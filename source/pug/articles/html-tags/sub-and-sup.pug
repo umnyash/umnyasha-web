@@ -1,0 +1,25 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Теги sub и sup'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;sub&gt;&lt;/sub&gt;] (сокращение от «subscript») отображает текст в виде нижнего индекса, а тег #[b &lt;sup&gt;&lt;/sup&gt;] (сокращение от «superscript») в виде верхнего индекса.
+      p Эти теги чаще используются для выделения отдельных символов, а не слов. Их используют для указания единиц измерения или написания простых формул.
+      p Например:
+      pre
+        code.
+          20м&lt;sup&gt;2&lt;/sup&gt;
+          H&lt;sub&gt;2&lt;/sub&gt;O
+          X&lt;sup&gt;2&lt;/sup&gt; + X&lt;sup&gt;3&lt;/sup&gt; = 1
+      figure
+        | 20м #[sup 2]#[br]
+        | H#[sub 2]O#[br]
+        | X#[sup 2] + X#[sup 3] = 1
+      p Для создания более сложных формул теги #[b &lt;sup&gt;&lt;/sup&gt;] и #[b &lt;sub&gt;&lt;/sub&gt;] можно использовать внутри друг друга.
+      p Если вам нужно вставить очень сложную формулу в HTML-документ, лучше воспользоваться специальным языком разметки #[i MathML].
+

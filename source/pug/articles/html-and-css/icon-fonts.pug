@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Иконочные шрифты'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Помимо букв шрифт может содержать и другие графические символы.
+      p Инструменты, позволяющие собрать свой собственный шрифт из SVG-объектов:
+      ul
+        li #[a(href='https://icomoon.io/app' target='_blank' rel='nofollow noopener') icomoon.io/app]
+        li #[a(href='https://fontastic.me' target='_blank' rel='nofollow noopener') fontastic.me]
+        li #[a(href='https://glyphter.com' target='_blank' rel='nofollow noopener') glyphter.com]
+      p Преимуществом шрифтовых иконок перед растровыми картинками является то, что их легко масшатбировать или перекрасить в другой цвет с помощью CSS-свойств, применимых к тексту. Также на экранах с большой плотностью пикселей шрифт не «замыливается», как это происходит с обычными картинками.

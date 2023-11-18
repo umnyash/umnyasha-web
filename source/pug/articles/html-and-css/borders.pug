@@ -1,0 +1,68 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Рамки'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      h2 Рамка
+      ul
+        li #[a(href='../css-properties/border-width.html') border-width] — ширина.
+        li #[a(href='../css-properties/border-style.html') border-style] — вид.
+        li #[a(href='../css-properties/border-color.html') border-color] — цвет.
+        li #[a(href='../css-properties/border.html') border] — составное свойство (width style color).
+        li #[a(href='../css-properties/border-radius.html') border-radius] — радиус скругления углов.
+      p Фоновое изображение для рамки:
+      ul
+        li #[a(href='../css-properties/border-image-source.html') border-image-source] — изображение.
+        li #[a(href='../css-properties/border-image-slice.html') border-image-slice] — нарезка изображения.
+        li #[a(href='../css-properties/border-image-width.html') border-image-width] — ширина изображения.
+        li #[a(href='../css-properties/border-image-outset.html') border-image-outset] — отступ изображения.
+        li #[a(href='../css-properties/border-image-repeat.html') border-image-repeat] — режим заполнения.
+        li #[a(href='../css-properties/border-image.html') border-image] — составное свойство (source slice width outset repeat).
+      p Свойство #[a(href='../css-properties/border-radius.html') border-radius] не влияет на фоновое изображение рамки, так что единственный способ сделать округлую рамку — использовать круглую картинку.
+      h3 Установка рамки с отдельной стороны
+      p Каждая из сторон border-рамки может иметь свои толщину, вид и цвет, или вовсе отсутствовать. Для такой настройки существуют следующие свойства:
+      ul
+        li #[b border-top] — рамка сверху.
+        li #[b border-right] — рамка справа.
+        li #[b border-bottom] — рамка снизу.
+        li #[b border-left] — рамка слева.
+      p Кроме того, внутренняя рамка не обязательно должна присутствовать со всех сторон и значением #[b none] можно отключить какую-либо её часть. Например:
+      pre
+        code.
+          border: 10px dashed #000;
+          border-left: none;
+      p Эти свойства являются составными, поэтому для настройки отдельного параметра каждой части рамки имеются соответствующие свойства:
+      li #[b border-top-width], #[b border-top-style], #[b border-top-color].
+      li #[b border-right-width], #[b border-right-style], #[b border-right-color].
+      li #[b border-bottom-width], #[b border-bottom-style], #[b border-bottom-color].
+      li #[b border-left-width], #[b border-left-style], #[b border-left-color].
+      h4 Треугольники из рамок
+      p У рамок есть одна особенность: если рамка элемента широкая, а сам элемент имеет нулевую ширину и высоту, то стороны рамки становятся треугольными.
+      p
+        img(src='../../img/triangles-from-frames.png' width='375' height='200' alt='')
+      p Чтобы сделать треугольник нужно:
+      ul
+        li Одной из сторон рамки задать нужный цвет.
+        li Противоположной стороне рамки задать нулевую толщину.
+        li Две другие стороны сделать прозрачными, задав прозрачный цвет (#[b transparent]).
+      p Так с помощью обычного #[b border] можно создавать треугольные стрелки, направленные во все стороны.
+      p Похожим способом можно создавать треугольные стрелки, направленные по диагонали.
+      ul
+        li Одной из сторон рамки задать нужный цвет.
+        li Задать нулевую ширину противоположной стороне рамки и ещё одной.
+        li Последнюю сторону сделать прозрачной.
+      p Стрелки выгодно делать с помощью рамок, потому что таким стрелкам можно легко менять пропорции, задавать разные цвета и размеры.
+      h2 Внешняя рамка
+      p Внешняя рамка всегда отображается снаружи элемента, не влияет на его размер и не занимает места.
+      P Она подстраивается под форму элемента во всех браузерах кроме Safari, где отображается прямоугольной.
+      ul
+        li #[a(href='../css-properties/outline-width.html') outline-width] — ширина.
+        li #[a(href='../css-properties/outline-style.html') outline-style] — вид.
+        li #[a(href='../css-properties/outline-color.html') outline-color] — цвет.
+        li #[a(href='../css-properties/outline.html') outline] — составное свойство (width style color).
+        li #[a(href='../css-properties/outline-offset.html') outline-offset] — отступ.

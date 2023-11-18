@@ -1,0 +1,34 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Функции кубических кривых Безье'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p В CSS функции кубических кривых Безье используются, чтобы задать темп переходов и анимаций.
+      pre
+        code.
+          cubic-bezier(x1, y1, x2, y2)
+      p Значения #[b x] и #[b y] — это координаты контрольных точек кривой на графике, по оси X которого откладывается продолжительность анимации, а по оси Y — её прогресс.
+      p Значения #[b x] допустимы только в диапазоне от #[b 0] до #[b 1].
+      p #[a(href='https://cubic-bezier.com' target='_blank' rel='nofollow noopener') Сервис, помогающий разобраться в функциональном представлении кривых Безье].
+      p Пример:
+      pre
+        code.
+          cubic-bezier(0, 0, 1, 1) /* linear */
+          cubic-bezier(0.42, 0, 1, 1) /* ease */
+      p
+        img(src='../../img/cubic-bezier-linear-ease.png' width='600' height='380' alt='')
+      p Псевдонимы функций:
+      ul
+        li #[b linear] — переход равномерный, без ускорений и замедлений.
+        li #[b ease] — начинается медленно, затем ускоряется и к концу движения опять замедляется.
+        li #[b ease-in] — начинается медленно, а к концу ускоряется.
+        li #[b ease-out] — начинается быстро, а к концу замедляется.
+        li #[b ease-in-out] — похоже на #[b ease], то есть переход начинается и заканчивается медленно, но происходит это чуть интенсивнее.
+      p
+        img(src='../../img/cubic-bezier-ease-in-ease-out-ease-in-out.png' width='700' height='340' alt='')
+      p #[a(href='https://easings.net/ru' target='_blank' rel='nofollow noopener') Коллекция разных easing-функций на основе кривых Безье].

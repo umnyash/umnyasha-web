@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'async/await'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Оператор #[b async] позволяет определить асинхронную функцию.
+      pre
+        code.
+          async function foo() {}          // Function Declaration
+          const foo = async function() {}  // Function Expression
+          const foo = async () => {}       // Arrow Function Expression
+      p Асинхронная функция всегда возвращает промис (если возвращаемое значение не промис, то оборачивается в промис).
+      p Асинхронная функция может содержать оператор #[b await], который приостанавливает выполнение асинхронной функции и ожидает завершения переданного промиса. Если промис выполняется, то возращает его результат, иначе генерирует исключение.

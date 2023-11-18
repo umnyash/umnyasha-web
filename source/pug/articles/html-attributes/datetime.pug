@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Атрибут datetime'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Атрибут #[b datetime] предназначен не для людей, а для компьютеров, поэтому дату и время там пишут в стандартизированном формате (#[i ISO 8601]). При такой разметке программам легче разбирать документы и анализировать, когда произошли те или иные изменения.
+      p Содержимое #[b datetime] не отображается, но доступно компьютерам.
+      p Пример:
+      pre
+        code.
+          &lt;time datetime="2016-11-18T09:54"&gt;09:54 утра&lt;/time&gt;

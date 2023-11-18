@@ -1,0 +1,53 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Цитаты'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p В HTML существует 2 тега для разметки цитат.
+      h2 Тег q, встроенная цитата
+      p Тег #[b &lt;q&gt;&lt;/q&gt;] (сокращение от «quote») предназначен для выделения цитат внутри предложения. Текст внутри этого тега браузер автоматически обрамляет кавычками, поэтому добавлять кавычки вручную не нужно.
+      p Пример:
+      pre
+        code.
+          Как писал Бернард Корнуэлл в &lt;cite&gt;Саксонских хрониках&lt;/cite&gt;, &lt;q&gt;Судьба неумолима&lt;/q&gt;.
+      p Если известен интернет-адрес цитаты, то его можно указать в атрибуте #[b cite]:
+      pre
+        code.
+          В спецификации говорится: &lt;q cite="https://www.w3.org/TR/html52"&gt;The q element represents some phrasing content quoted from another source&lt;/q&gt;.
+      figure
+       | В спецификации говорится: #[q The q element represents some phrasing content quoted from another source].
+      p С помощью CSS-свойства #[b quotes], можно задать другие кавычки для обрамления цитаты. Для этого в значении свойства записываются Unicode-символы (каждый в кавычках) для открывающей и закрывающей кавычек.
+      p Пример:
+      pre
+        code.
+          q {
+            quotes: "„" "“";
+          }
+      figure
+        blockquote
+          | В спецификации говорится: #[q(style='quotes: "„" "“";') The q element represents some phrasing content quoted from another source].
+      h2 Тег blockquote, отдельная цитата
+      p Для выделения длинных цитат, которые могут состоять из нескольких абзацев, предназначен тег #[b &lt;blockquote&gt;&lt;/blockquote&gt;]. Он выделяет цитату не как фрагмент текста в предложении, а как отдельный блок текста с отступами.
+      p Пример:
+      pre
+        code.
+          &lt;blockquote&gt;
+            Рыба очень вкусная!
+          &lt;/blockquote&gt;
+      p Авторство цитаты, при наличии, должно размещаться за пределами #[b &lt;blockquote&gt;&lt;/blockquote&gt;]:
+      pre
+        code.
+          &lt;blockquote&gt;
+            Рыба очень вкусная!
+          &lt;/blockquote&gt;
+          &lt;p&gt;Русик&lt;/p&gt;
+      figure
+        blockquote
+          | Рыба очень вкусная!
+        p Русик
+      p Так же, как и у #[b &lt;q&gt;&lt;/q&gt;], у #[b &lt;blockquote&gt;&lt;/blockquote&gt;] может быть атрибут #[b cite], содержащий ссылку на источник цитаты. Этот атрибут нужен для соблюдения авторского права.

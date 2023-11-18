@@ -1,0 +1,19 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Теги address'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;address&gt;&lt;/address&gt;] представляет собой контактную информацию, относящуюся ко всей странице #[b &lt;body&gt;&lt;/body&gt;]. Если тег расположен внутри #[b &lt;article&gt;&lt;/article&gt;], то контактная информация относится непосредственно к этой статье.
+      p Этот тег должен содержать только реальный метод связи: ссылку на автора, электронную почту, номер телефона, почтовый адрес.
+      p Пример:
+      pre
+        code.
+          &lt;address&gt;
+            Для получения подробной информации свяжитесь с
+            &lt;a href="email@mail.ru"&gt;Умняшем&lt;/a&gt;
+          &lt;/address&gt;

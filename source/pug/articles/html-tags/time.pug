@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег time'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p В HTML есть специальный тег для разметки даты и времени. Это тег #[b &lt;time&gt;&lt;/time&gt;].
+      p С помощью #[b &lt;time&gt;&lt;/time&gt;] можно описывать даты одновременно и для человека, и для машины. Дата для человека описывается внутри тега, а дата для машины — внутри атрибута #[a(href='../html-attributes/datetime.html') datetime]:
+      pre
+        code.
+          &lt;time datetime="2016-11-18T09:54"&gt;09:54 утра&lt;/time&gt;
+          &lt;time datetime="2015-11-18"&gt;18 ноября 2015&lt;/time&gt;
+          &lt;time datetime="2018-09-23"&gt;в прошлую субботу&lt;/time&gt;
+          &lt;time datetime="2017-04-20"&gt;вчера&lt;/time&gt;

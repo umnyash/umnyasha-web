@@ -1,0 +1,20 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег article'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;article&gt;&lt;/article&gt;] обозначает цельный, самостоятельный и независимый фрагмент информации.
+      p Тег #[b &lt;article&gt;&lt;/article&gt;], в отличие от #[b &lt;section&gt;&lt;/section&gt;], можно вырвать из одного места и вставить в другое (на другую страницу сайта или на другой сайт), и смысл содержимого тега при этом не потеряется. Примеры: статья, пост в блоге, сообщение на форуме и так далее.
+      pre
+        code.
+          &lt;article&gt;
+            Я фотка в инстаграме, смотрюсь отлично где угодно.
+          &lt;/article&gt;
+      p Тег #[b &lt;article&gt;&lt;/article&gt;] при разметке удобно считать отдельной и самостоятельной страницей сайта. При этом иерархия заголовков на всей нашей странице должна быть «сквозная», то есть внутри #[b &lt;article&gt;&lt;/article&gt;] заголовок будет «очередного» уровня.
+      p Тег #[b &lt;section&gt;&lt;/section&gt;] можно использовать внутри #[b &lt;article&gt;&lt;/article&gt;], если там нужно выделить отдельные смысловые блоки.
+      p Точно так же можно использовать #[b &lt;article&gt;&lt;/article&gt;] внутри #[b &lt;section&gt;&lt;/section&gt;], если в логическом разделе документа содержатся независимые контентные блоки.

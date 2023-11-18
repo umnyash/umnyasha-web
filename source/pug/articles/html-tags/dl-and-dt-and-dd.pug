@@ -1,0 +1,29 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Теги dl, dt и dd'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Список описаний хорош для разметки вопросов-ответов, наименований и определений, категорий и тем. Он создаётся с помощью 3 тегов:
+      ul
+        li #[b &lt;dl&gt;&lt;/dl&gt;] — («description list») сам список описаний.
+        li #[b &lt;dt&gt;&lt;/dt&gt;] — («description term») термин.
+        li #[b &lt;dd&gt;&lt;/dd&gt;] — («description definition») описание или определение.
+      p Теги #[b &lt;dt&gt;&lt;/dt&gt;] и #[b &lt;dd&gt;&lt;/dd&gt;] пишутся внутри #[b &lt;dl&gt;&lt;/dl&gt;].
+      p Каждый список #[b &lt;dl&gt;&lt;/dl&gt;] может содержать один или несколько терминов и одно или несколько описаний для каждого термина.
+      pre
+        code.
+          &lt;dl&gt;
+            &lt;dt&gt;HTML&lt;/dt&gt;
+            &lt;dd&gt;Язык гипертекстовой разметки.&lt;/dd&gt;
+            &lt;dt&gt;CSS&lt;/dt&gt;
+            &lt;dd&gt;Каскадные таблицы стилей.&lt;/dd&gt;
+            &lt;dd&gt;Язык для оформления HTML-документов.&lt;/dd&gt;
+          &lt;/dl&gt;
+      p По умолчанию браузер добавляет небольшой отступ слева от определений.
+      p Термины и описания можно группировать с помощью тега #[b &lt;div&gt;&lt;/div&gt;]. В таком случае в #[b &lt;dl&gt;&lt;/dl&gt;] не должно остаться тегов #[b &lt;dt&gt;&lt;/dt&gt;] и #[b &lt;dd&gt;&lt;/dd&gt;] без обёртки.
+

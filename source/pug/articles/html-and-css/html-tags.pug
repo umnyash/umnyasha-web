@@ -1,0 +1,47 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Все HTML-теги'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      ol
+        li #[a(href='../html-tags/a.html') a] — ссылка.
+        li #[a(href='../html-tags/abbr.html') abbr] — аббревиатура.
+        li #[a(href='../html-tags/acronym.html') acronym] — акроним.
+        li #[a(href='../html-tags/address.html') address] — контактная информация.
+        li #[a(href='../html-tags/article.html') article] — отделяемый от сайта смысловой раздел.
+        li #[a(href='../html-tags/aside.html') aside] — дополнительное содержимое.
+        li #[a(href='../html-tags/audio.html') audio] — аудиоплеер.
+        li #[a(href='../html-tags/b.html') b] — привлечение внимания.
+        li #[a(href='../html-tags/br.html') br] — перенос строки.
+        li #[a(href='../html-tags/cite.html') cite] — название произведения.
+        li #[a(href='../html-tags/code.html') code] — фрагмент кода.
+        li #[a(href='../html-tags/del-and-ins.html') del и ins] — выделение изменений.
+        li #[a(href='../html-tags/div-and-span.html') div и span] — контейнеры для стилизации.
+        li #[a(href='../html-tags/dl-and-dt-and-dd.html') dl, dt и dd] — список описаний.
+        li #[a(href='../html-tags/dfn.html') dfn] — термин.
+        li #[a(href='../html-tags/em.html') em] — акцентирование внимания.
+        li #[a(href='../html-tags/figure-and-figcaption.html') figure и figcaption] — демонстрационный материал.
+        li #[a(href='../html-tags/h1-h6.html') h1]–#[a(href='../html-tags/h1-h6.html') h6] — заголовки.
+        li #[a(href='../html-tags/i.html') i] — необычные слова.
+        li #[a(href='../html-tags/img-and-picture.html') img и picture] — изображения.
+        li #[a(href='../html-tags/kbd.html') kbd] — клавиша.
+        li #[a(href='../html-tags/mark.html') mark] — контекстуальное выделение.
+        li #[a(href='../html-tags/meter.html') meter] — измеритель.
+        li #[a(href='../html-tags/nav.html') nav] — основная навигация.
+        li #[a(href='../html-tags/p.html') p] — параграф.
+        li #[a(href='../html-tags/pre.html') pre] — преформатированный текст.
+        li #[a(href='../html-tags/progress.html') progress] — прогресс выполнения.
+        li #[a(href='../html-tags/q-and-blockquote.html') q и blockquote] — цитаты.
+        li #[a(href='../html-tags/s.html') s] — неактуальная информация.
+        li #[a(href='../html-tags/section.html') section] — смысловой раздел, который нельзя отделить от конкретной страницы или документа.
+        li #[a(href='../html-tags/small.html') small] — побочный комментарий.
+        li #[a(href='../html-tags/strong.html') strong] — важность.
+        li #[a(href='../html-tags/sub-and-sup.html') sub и sup] — нижний и верхний индексы.
+        li #[a(href='../html-tags/time.html') time] — дата и время.
+        li #[a(href='../html-tags/ul-and-ol-and-li.html') ul, ol и li] — списки.
+        li #[a(href='../html-tags/video.html') video] — видеоплеер.

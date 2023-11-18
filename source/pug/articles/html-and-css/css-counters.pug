@@ -1,0 +1,119 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'CSS-счётчики'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Стандартные числовые или буквенные маркеры сложно стилизовать. Поэтому их часто скрывают с помощью #[a(href='../css-properties/list-style.html') list-style: none] и затем воссоздают с помощью CSS-счётчиков.
+      h3 Свойство counter-reset, инициализация счётчика
+      p Свойство #[b counter-reset] задаётся родителю тех элементов, которые нужно считать. Оно создаёт счётчик и устанавливает его начальное значение.
+      pre
+        code.
+          .list {
+            counter-reset: years 2000;
+          }
+      p Если начальное значение не задано, то оно будет равняться нулю.
+      h3 Свойство counter-increment, подключение счётчика
+      p Свойство #[b counter-increment] принимает в качестве значения название счётчика и задаётся тем элементам, которые нужно считать.
+      pre
+        code.
+          .list li {
+            counter-increment: years;
+          }
+      p В данном примере, в значении счётчика #[b years] будет храниться только число дочерних элементов #[b &lt;li&gt;&lt;/li&gt;].
+      p Элементы #[b &lt;li&gt;&lt;/li&gt;] вложенного списка (при наличии) будут подсчитываться отдельно счётчиком с таким же названием.
+      h3 Вывод значения счётчика
+      p Значение счётчика можно вывести с помощью псевдоклассов #[b ::before]/#[b ::after], свойства #[b content] и функций #[b counter()] и #[b counters()].
+      p Содержимое #[b content] может собираться из нескольких частей, например:
+      pre
+        code.
+          .list li::before {
+            content: "#" counter(years);
+          }
+      p Получится — #2001, #2002 и так далее.
+      p Чтобы вложенные элементы наследовали значение счётчика родителя, нужно воспользоваться функцией #[b counters()]. Она принимает два параметра: название счётчика и строку разделитель, которая будет появляться между значениями вложенных счётчиков.
+      p Пример:
+      pre
+        code.
+          &lt;!-- HTML --&gt;
+          &lt;ol&gt;
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;Тип документа&lt;/li&gt;
+            &lt;li&gt;Основные теги HTML
+              &lt;ol&gt;
+                &lt;li&gt;Тег html&lt;/li&gt;
+                &lt;li&gt;Тег head&lt;/li&gt;
+                &lt;li&gt;Тег body&lt;/li&gt;
+              &lt;/ol&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Крупные смысловые блоки&lt;/li&gt;
+          &lt;/ol&gt;
+
+          /* CSS */
+          ol {
+            list-style: none;
+            counter-reset: chapters;
+          }
+          ol li {
+            counter-increment: chapters;
+          }
+          ol li::before {
+            content: counters(chapters, ".") ". ";
+          }
+      figure
+        ol(style='list-style: none;')
+          li 1. HTML
+          li 2. Тип документа
+          li 3. Основные теги HTML
+            ol(style='list-style: none;')
+              li 3.1. Тег html
+              li 3.2. Тег head
+              li 3.3. Тег body
+          li 4. Крупные смысловые блоки
+      p #[strong Если счётчик инициализирован не в родителе элементов, то дочерние элементы и другие потомки будут считаться вместе:]
+      pre
+        code.
+          &lt;!-- HTML --&gt;
+          &lt;nav&gt;
+            &lt;ol&gt;
+              &lt;li&gt;HTML&lt;/li&gt;
+              &lt;li&gt;Тип документа&lt;/li&gt;
+              &lt;li&gt;Основные теги HTML
+                &lt;ol&gt;
+                  &lt;li&gt;Тег html&lt;/li&gt;
+                  &lt;li&gt;Тег head&lt;/li&gt;
+                  &lt;li&gt;Тег body&lt;/li&gt;
+                &lt;/ol&gt;
+              &lt;/li&gt;
+              &lt;li&gt;Крупные смысловые блоки&lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/nav&gt;
+
+          /* CSS */
+          nav {
+            counter-reset: chapters;
+          }
+          ol {
+            list-style: none;
+          }
+          ol li {
+            counter-increment: chapters;
+          }
+          ol li::before {
+            content: counters(chapters, ".") ". ";
+          }
+      figure
+        nav
+          ol(style='list-style: none;')
+            li 1. HTML
+            li 2. Тип документа
+            li 3. Основные теги HTML
+              ol(style='list-style: none;')
+                li 4. Тег html
+                li 5. Тег head
+                li 6. Тег body
+            li 7. Крупные смысловые блоки

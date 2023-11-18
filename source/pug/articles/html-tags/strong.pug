@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Тег strong'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;strong&gt;&lt;/strong&gt;] (сокращение от «strong importance») указывает на повышенную важность, серьёзность или срочность отмеченного текста.
+      p Например, он может использоваться для выделения предупреждений или части документа, которую пользователь должен увидеть раньше остального.
+      pre
+        code.
+          &lt;strong&gt;Внимание!&lt;/strong&gt; Это место опасно. &lt;strong&gt;Вы можете упасть в пропасть&lt;/strong&gt;, если подойдёте близко к краю.
+      p По умолчанию тег #[b &lt;strong&gt;&lt;/strong&gt;] выделяет текст жирным.
+      p Скринридер при чтении сайта будет выделять слова с этим тегом интонационно.

@@ -1,0 +1,11 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Колбэки'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p #[dfn #[abbr(title='Блок, элемент, модификатор') Колбэк-функция]] — это функция, переданная в другую функцию в качестве аргумента, которая затем вызывается по завершению какого-либо действия.
