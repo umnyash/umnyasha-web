@@ -1,0 +1,19 @@
+extends layout/layout
+
+block variables
+  - var title = 'Главная страница'
+  - var pageClass = 'index-page'
+
+block content
+  main
+    .container
+      nav
+        ul
+          li #[a(href='html-and-css.html') HTML и CSS]
+          li #[a(href='css-preprocessors.html') CSS-препроцессоры]
+          li #[a(href='design.html') Дизайн]
+          li #[a(href='bem.html') БЭМ]
+          li #[a(href='java-script.html') Java Script]
+          li #[a(href='type-script.html') Type Script]
+          li #[a(href='optimization.html') Оптимизация]
+          li #[a(href='canvas.html') Canvas]

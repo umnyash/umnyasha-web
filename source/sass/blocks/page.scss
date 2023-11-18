@@ -1,0 +1,18 @@
+.page__body {
+  margin: 0;
+  font: 400 16px/28px "Arial", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  // background-color: burlywood;
+}
+
+.page__inner {
+  position: relative;
+  display: grid;
+  box-sizing: border-box;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  row-gap: 48px;
+  overflow-y: auto;
+}

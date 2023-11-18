@@ -1,0 +1,128 @@
+.article {
+  *:first-child {
+    margin-top: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  p img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  a {
+    color: rgb(255, 128, 64);
+  }
+
+  b {
+    color: var(--keyword-color);
+    font-weight: inherit;
+  }
+
+  li a {
+    color: var(--keyword-color);
+
+    &[href] {
+      color: var(--keyword-link-color);
+    }
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+
+  dfn {
+    font-style: inherit;
+  }
+
+  code {
+    font-family: "Consolas", monospace;
+  }
+
+  pre {
+    padding: 16px;
+    background-color: #f8f8f8;
+    overflow: auto;
+  }
+
+  .table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    margin: 0 auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  tbody th {
+    text-align: left;
+    font-weight: inherit;
+  }
+
+  abbr {
+    font-style: normal;
+    text-decoration: none;
+  }
+
+  dfn {
+    font-style: normal;
+  }
+
+  th {
+    width: min-content;
+  }
+
+  th,
+  td {
+    padding: 4px 16px;
+    border: 1px solid currentColor;
+  }
+
+  figure {
+    position: relative;
+    padding: 44px 32px 24px;
+    border: 2px solid #d8d7e4;
+    border-radius: 8px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  figure::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 24px;
+    background-color: #d8d7e4;
+  }
+
+  figure::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #f05a28;
+    box-shadow: 12px 0 #E79B07, 24px 0 #69b253;
+  }
+
+  figure blockquote,
+  figure ul,
+  figure ol,
+  figure p {
+    margin: 0;
+  }
+}

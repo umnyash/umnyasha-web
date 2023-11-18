@@ -1,0 +1,19 @@
+extends layout/layout
+
+block variables
+  - var title = 'Canvas'
+
+block content
+  main
+    .container
+      nav
+        ol
+          li #[a(href='articles/canvas/canvas-basics.html') Основы Canvas]
+          li 2D-рендеринг
+            ol
+              li #[a(href='articles/canvas-2d/figures.html') Создание путей и фигур]
+              li #[a(href='articles/canvas-2d/styles.html') Применение стилей]
+              li #[a(href='articles/canvas-2d/text.html') Текст]
+              li #[a(href='articles/canvas-2d/images.html') Использование изображений]
+              li #[a(href='articles/canvas-2d/configuration.html') Конфигурация холста]
+              li #[a(href='articles/canvas-2d/transformation.html') Трансформации]

@@ -1,0 +1,27 @@
+:root {
+  --text-color: #000000;
+  --background-color: #ffffff;
+  --keyword-color: #008080;
+  --keyword-link-color: #800040;
+  --navigation-link-color: rgb(0, 64, 128);
+}
+
+a {
+  &[href]:hover {
+    text-decoration: none;
+  }
+
+  &[href]:active {
+    text-decoration: none;
+    opacity: 0.75;
+  }
+}
+
+nav ul,
+nav ol {
+  margin: 0;
+}
+
+nav a {
+  color: var(--navigation-link-color);
+}

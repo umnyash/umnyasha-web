@@ -1,0 +1,16 @@
+extends layout/layout
+
+block variables
+  - var title = 'Java Script'
+
+block content
+  main
+    .container
+      nav
+        ol
+          li #[a(href='articles/java-script/callback.html') Колбэки]
+          li #[a(href='articles/java-script/error-processing.html') Обработка ошибок]
+          li #[a(href='articles/java-script/json.html') JSON]
+          li #[a(href='articles/java-script/promise.html') Промисы]
+          li #[a(href='articles/java-script/async-await.html') async-await]
+          li #[a(href='articles/java-script/fetch.html') fetch]

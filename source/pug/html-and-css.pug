@@ -1,0 +1,46 @@
+extends layout/layout
+
+block variables
+  - var title = 'HTML и CSS'
+
+block content
+  main
+    .container
+      nav
+        ol
+          li #[a(href='articles/html-and-css/html-tags.html') Все HTML-теги]
+          li #[a(href='articles/html-and-css/css-properties.html') Все CSS-свойства]
+          li #[a(href='articles/html-and-css/html-basics.html') Основы HTML]
+          li #[a(href='articles/html-and-css/large-semantic-blocks.html') Крупные смысловые блоки]
+          li #[a(href='articles/html-and-css/block-document-model.html') Блочная модель документа]
+          li #[a(href='articles/html-and-css/indents.html') Отступы]
+          li #[a(href='articles/html-and-css/borders.html') Рамки]
+          li #[a(href='articles/html-and-css/width-and-height.html') Ширина и высота элементов]
+          li #[a(href='articles/html-and-css/css-counters.html') CSS-счётчики]
+          li #[a(href='articles/html-and-css/css-columns.html') CSS-колонки]
+          li #[a(href='articles/html-and-css/typography.html') Типографика]
+          li #[a(href='articles/html-and-css/unicode-characters.html') Unicode-символы]
+          li #[a(href='articles/html-and-css/text-design.html') Оформление текста]
+          li #[a(href='articles/html-and-css/media-queries.html') Медиа-запросы]
+          li Шрифты
+            ol
+              li #[a(href='articles/html-and-css/custom-fonts.html') Нестандартные шрифты]
+              li #[a(href='articles/html-and-css/web-safe-fonts.html') Веб-безопасные шрифты]
+              li #[a(href='articles/html-and-css/fonts-optimization.html') Оптимизация шрифтов]
+              li #[a(href='articles/html-and-css/icon-fonts.html') Иконочные шрифты]
+          li Изображения
+            ol
+              li #[a(href='articles/html-and-css/raster-and-vector-graphics.html') Растровая и векторная графика]
+              li #[a(href='articles/html-and-css/image-formats.html') Форматы изображений]
+              li #[a(href='articles/html-and-css/content-and-decorative-images.html') Контентные и декоративные изображения]
+              li #[a(href='articles/html-and-css/backgrounds.html') Фоны]
+              li #[a(href='articles/html-and-css/sprites.html') Спрайты]
+              li #[a(href='articles/html-and-css/svg-basics.html') Основы SVG]
+              li #[a(href='articles/html-and-css/using-svg.html') Использование SVG]
+          li Анимации
+            ol
+              li #[a(href='articles/html-and-css/animation-basics.html') Основы анимации]
+              li #[a(href='articles/html-and-css/css-transition.html') CSS-переходы]
+              li #[a(href='articles/html-and-css/css-animation.html') CSS-анимации]
+              li #[a(href='articles/html-and-css/cubic-bezier.html') Функции кубических кривых Безье]
+              li #[a(href='articles/html-and-css/steps.html') Функция steps]
