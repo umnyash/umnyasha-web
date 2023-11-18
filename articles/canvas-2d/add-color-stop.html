@@ -1,0 +1,20 @@
+<!DOCTYPE html><html class="page" lang="ru"><head><meta charset="utf-8"><title>Метод addColorStop</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="../../css/style.min.css"></head><body class="page__body"><div class="page__inner"><header class="page-header"><div class="container"><a class="logo" href="../../index.html">Umnyasha Web</a></div></header><main><article class="article container"><h1>Метод addColorStop</h1><p>Метод <b>addColorStop(position, color)</b> — добавить колорстоп.</p><ul><li><b>postion</b> — относительная позиция цвета в сердце градиента. Принимает значения от <b>0</b> (начало) до <b>1</b> (конец).</li><li><b>color</b> — цвет в любом CSS-формате.</li></ul><p>Метод вызывается у созданного градиента.</p><p>Пример:</p><pre><code>const gradient = ctx.createLinearGradient(0, 0, 0, 100);
+gradient.addColorStop(0, 'black');
+gradient.addColorStop(0.5, 'pink');
+gradient.addColorStop(0.5, 'red');
+gradient.addColorStop(1, 'green');</code></pre><figure><canvas id="canvas" width="200" height="100"></canvas></figure></article></main><script>function draw() {
+  const canvas = document.querySelector('#canvas');
+  if (canvas.getContext) {
+    const ctx = canvas.getContext('2d');
+
+    const gradient = ctx.createLinearGradient(0, 0, 0, 100);
+    gradient.addColorStop(0, 'black');
+    gradient.addColorStop(0.5, 'pink');
+    gradient.addColorStop(0.5, 'red');
+    gradient.addColorStop(1, 'green');
+
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 200, 100);
+  }
+}
+draw()</script><footer class="page-footer"><div class="container">=^-^=</div></footer></div></body></html>
