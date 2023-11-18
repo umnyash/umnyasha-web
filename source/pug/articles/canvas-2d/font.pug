@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство font'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b font] — параметры шрифта.
+      p Аналогично CSS-свойству #[a(href='../css-properties/font.html') font] и принимает такие же значения.

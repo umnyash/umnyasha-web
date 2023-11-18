@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод scale'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b scale(x, y)] — масштабировать в #[b x] раз по оси X и в #[b y] раз по оси Y.
+      p Использование отрицательных чисел приводит к зеркальному отражению.

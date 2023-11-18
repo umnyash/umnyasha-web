@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство shadowColor'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b shadowColor] — цвет тени.
+      p Значения:
+      ul
+        li Цвет в любом CSS-формате.
+      p По умолчанию цвет — чёрный.

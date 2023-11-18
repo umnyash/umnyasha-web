@@ -1,0 +1,57 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Основы Canvas'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Тег #[b &lt;canvas&gt;&lt;/canvas&gt;] используется для рисования графики средствами языков программирования (обычно это JavaScript). Он может, к примеру, использоваться для рисования графиков, создания коллажей и анимаций.
+      p Этот тег имеет два атрибута: #[b width] и #[b height], в которых можно задать его размеры.
+      pre
+        code.
+          &lt;canvas width="320" height="200"&gt;&lt;/canvas&gt;
+      p По умолчанию #[b &lt;canvas&gt;&lt;/canvas&gt;] абсолютно прозрачный и имеет размеры 300px × 150px.
+      p #[b &lt;canvas&gt;&lt;/canvas&gt;] может быть стилизован (#[b margin], #[b border], #[b background] и т. д.), но это не влияет на рисунок.
+      p Внутрь тега может быть вложено альтернативное содержимое, которое будет отображено, если браузер не поддерживает #[b &lt;canvas&gt;&lt;/canvas&gt;].
+      p Проверить поддерживает ли бразер #[b &lt;canvas&gt;&lt;/canvas&gt;] можно из кода, проверив наличие метода #[b getContext]:
+      pre
+        code.
+          const canvas = document.querySelector('#my-canvas');
+          if (canvas.getContext) {
+            // ...
+          }
+      p Содержимое Canvas недоступно для программ чтения с экрана. Если холст является чисто декоративным, нужно добавить атрибут #[b role="presentation"]. В противном случае можно добавить описание в атрибуте #[b aria-label].
+      h2 Рисование в 2D
+      p Для начала нужно найти элемент и получить контекст:
+      pre
+        code.
+          const canvas = document.querySelector('#my-canvas');
+          const ctx = canvas.getContext('2d');
+      p Контекст предоставляет свойства и методы для рисования.
+      p Пример:
+      pre
+        code.
+          ctx.fillStyle = 'rgb(200, 0, 0)';
+          ctx.fillRect(10, 10, 50, 50);
+
+          ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
+          ctx.fillRect(30, 30, 50, 50);
+      figure
+        canvas#canvas-2d(width='90' height='90')
+  script.
+    function draw() {
+      const canvas = document.querySelector('#canvas-2d');
+      if (canvas.getContext) {
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'rgb(200, 0, 0)';
+        ctx.fillRect(10, 10, 50, 50);
+
+        ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
+        ctx.fillRect(30, 30, 50, 50);
+      }
+    }
+    draw()

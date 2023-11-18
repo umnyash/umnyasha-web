@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство shadowBlur'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b shadowBlur] — размытие тени.
+      p Значения:
+      ul
+        li Целые и дробные числа.
+      p Значение по умолчанию — #[b 0].

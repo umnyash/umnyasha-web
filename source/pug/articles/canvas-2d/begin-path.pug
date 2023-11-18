@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод beginPath'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b beginPath()] — начать новый путь.
+      p Пути состоят из списка подпутей, которые вместе образуют фигуру. Вызов #[b beginPath] очищает список подпутей, чтобы начать рисовать новую фигуру.

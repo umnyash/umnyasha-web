@@ -1,0 +1,14 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод rect'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b rect(x, y, width, height)] — переместить перо в позицию (#[b x], #[b y]) и добавить прямоугольник шириной #[b width] и высотой #[b height].
+      ul
+        li #[b x], #[b y] — положение верхнего левого угла прямоугольника.
+        li #[b width], #[b height] — размеры прямоугольника (ширина, высота).

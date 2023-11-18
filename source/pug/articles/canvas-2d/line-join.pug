@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство lineJoin'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b lineJoin] — соединение линий.
+      p Определяет как будет выглядеть угол в месте соединения линий.
+      p Значения:
+      ul
+        li #[b miter] — (значение по умолчанию) острый угол в месте соединения.
+        li #[b round] — закругленное соединение. Будет добавлен круг с центром в точке соединения и диаметром равным ширине обводки.
+        li #[b bevel] — плоское соединение.
+      p Эффект заметен при большой ширине обводки.

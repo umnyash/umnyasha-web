@@ -1,0 +1,14 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод setLineDash'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b setLineDash(segments)] — установить паттерн прерывистости обводки.
+      ul
+        li #[b segments] — массив чисел, поочередно задающих ширину линии и ширину разрыва. Если количество элементов в массиве нечётное, элементы массива копируются и объединяются. Например, #[b [5, 15, 25]] станет #[b [5, 15, 25, 5, 15, 25]]. Значением по умолчанию является пустой массив.
+      p Получить заданный паттерн можно с помощью метода #[a(href='get-line-dash.html') getLineDash].

@@ -1,0 +1,38 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Конфигурация'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Конфигурация холста включает себя:
+      ul
+        li Примененные трансформации (т.е. перемещение, поворот и масштабирование).
+        li Текущие значения атрибутов:
+          ul
+            li #[a(href='stroke-style.html') strokeStyle]
+            li #[a(href='fill-style.html') fillStyle]
+            li #[a(href='global-alpha.html') globalAlpha]
+            li #[a(href='line-width.html') lineWidth]
+            li #[a(href='line-cap.html') lineCap]
+            li #[a(href='line-join.html') lineJoin]
+            li #[a(href='miter-limit.html') miterLimit]
+            li #[a(href='line-dash-offset.html') lineDashOffset]
+            li #[a(href='shadow-offset-x.html') shadowOffsetX]
+            li #[a(href='shadow-offset-y.html') shadowOffsetY]
+            li #[a(href='shadow-blur.html') shadowBlur]
+            li #[a(href='shadow-color.html') shadowColor]
+            li #[a(href='global-composite-operation.html') globalCompositeOperation]
+            li #[a(href='font.html') font]
+            li #[a(href='text-align.html') textAlign]
+            li #[a(href='text-baseline.html') textBaseline]
+            li #[a(href='direction.html') direction]
+            li #[a(href='image-smoothing-enabled.html') imageSmoothingEnabled]
+        li Текущий путь обрезки.
+      p Методы управления конфигурацией:
+      ul
+        li #[b save] — сохранить текущую конфигурацию в стек.
+        li #[b restore] — извлечь из стека последнюю сохранённую конфигурацию и применить её к холсту.

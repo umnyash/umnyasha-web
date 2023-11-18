@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдоэлемент first-line'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдоэлемент #[b first-line] используется для стилизации первой строки текста.
+      p Пример:
+      pre
+        code.
+          p::first-line {
+            color: green;
+          }
+      p Стилизация ограничена: можно менять только параметры шрифта, фона и цвет текста.

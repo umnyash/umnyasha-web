@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство direction'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b direction] — направление текста.
+      p Определяется в зависимости от языка, но может быть задано явно.
+      p Значения:
+      ul
+        li #[b ltr] — слева направо.
+        li #[b rtl] — справо налево.
+        li #[b inherit] — значение наследуется от #[b &lt;canvas&gt;&lt;/canvas&gt;] или #[b document].

@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод moveTo'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b moveTo(x, y)] — переместить перо в позицию (#[b x], #[b y]).
+      p Если текущая позиция не определена (например, на новом холсте или после вызова #[a(href='begin-path.html') beginPath]) и вызывается метод, которому эта позиция необходима (например, #[a(href='line-to.html') lineTo] или #[a(href='arc-to.html') arcTo]), то этот метод будет обработан как #[b moveTo]. Поэтому в таких случаях лучше сначала явно вызвать #[b moveTo].

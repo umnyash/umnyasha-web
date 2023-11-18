@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод setTransform'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b setTransform(a, b, c, d, e, f)] — сбросить текущую трансформацию в единичную матрицу и вызвать #[a(href='transform.html') transform] с переданными аргументами.
+      p Фактически это отменяет текущее преобразование, а затем устанавливает указанное преобразование.

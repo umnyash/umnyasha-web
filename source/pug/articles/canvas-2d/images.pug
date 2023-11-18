@@ -1,0 +1,26 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Использование изображений'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Источники изображения:
+      ul
+        li #[b HTMLImageElement] — изображения, созданные с помощью конструктора #[b Image()], а также любого элемента #[b &lt;img&gt;].
+        li #[b SVGImageElement] — изображения встроенные с помощью #[b &lt;image&gt;] (этот тег используется для встраивания svg и растровых изображений внутрь тега #[b &lt;svg&gt;&lt;/svg&gt;]).
+        li #[b HTMLVideoElement] — использование HTML-элемента #[b &lt;video&gt;&lt;/video&gt;] в качестве источника изображения захватывает текущий кадр из видео и использует его в качестве изображения.
+        li #[b HTMLCanvasElement] — другой Canvas.
+        li #[b ImageBitmap] — обрезанное растровое изобржение. Такой тип используется для извлечения изображения из спрайта.
+        li #[b OffscreenCanvas] — особый вид Canvas, который не отображается и подготавливается без отображения.
+        li #[b VideoFrame] — изображение, представляющее один кадр видео.
+      p Отрисовка изображений:
+      ul
+        li #[a(href='draw-image.html') drawImage] — отрисовать изображение.
+      p Сглаживание изображений:
+      ul
+        li #[a(href='image-smoothing-enabled.html') imageSmoothingEnabled] — сглаживание изображений при масштабировании.
+        li #[a(href='image-smoothing-quality.html') imageSmoothingQuality] — качество сглаживания изображений.

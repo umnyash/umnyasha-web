@@ -1,0 +1,11 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство globalAlpha'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b globalAlpha] — уровень непрозрачности от #[b 0] (полная прозрачность) до #[b 1] (полная непрозрачность).

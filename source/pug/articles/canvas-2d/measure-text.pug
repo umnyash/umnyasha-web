@@ -1,0 +1,19 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод measureText'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b measureText(text)] — возвращает объект, который содержит различные измерения текста.
+      ul
+        li #[b text] — строка текста.
+      p Свойства возвращаемого объекта:
+      ul
+        li #[b width] — ширина текста.
+        li #[b actualBoundingBoxLeft] — расстояние от левого края текста до позиции #[b x].
+        li #[b actualBoundingBoxRight] — расстояние от позиции #[b x] до правого края текста.
+        li и другие...

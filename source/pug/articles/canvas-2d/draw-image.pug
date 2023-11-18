@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод drawImage'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Действует двояко в зависимости от переданных аргументов.
+      p Метод #[b drawImage(image, x, y, width, height)] — отрисовать изображение.
+      ul
+        li #[b image] — изображение.
+        li #[b x], #[b y] — позиция верхнего левого угла изображения.
+        li #[b width], #[b height] — (необязательные) ширина и высота. Используются только вместе.
+      p Метод #[b drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)] — кадрировать и нарисовать изображение.
+      p Метод вызванный с такими параметрами берёт область исходного изображения #[b image], заданную прямоугольником с шириной #[b sWidth] и высотой #[b sHeight], верхний левый угол которого расположен в (#[b sx], #[b sy]), задаёт ей размеры #[b dWidth] и #[b dHeight] и помещает её на холст в позицию (#[b dx], #[b dy]).

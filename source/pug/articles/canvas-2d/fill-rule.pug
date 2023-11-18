@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'fillRule'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p #[b fillRule] — алгоритм правила заполнения, с помощью которого можно определить, находится ли точка внутри или снаружи пути, и, следовательно, будет ли она заполнена или нет.
+      p Значения:
+      ul
+        li #[a(href='http://en.wikipedia.org/wiki/Nonzero-rule' target='_blank' rel='nofollow noopener') 'nonzero'] — (значение по умолчанию).
+        li #[a(href='http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule' target='_blank' rel='nofollow noopener') 'evenodd'].
+      p Эти значения могут использоваться в качестве аргументов методами #[a(href='fill.html') fill], #[a(href='clip.html') clip] и #[a(href='is-point-in-path.html') isPointInPath].
+      p Например, #[b fill('evenodd')] оставит незакрашенными вложенные закрытые пути, в отличие от #[b fill()] или #[b fill('nonzero')].

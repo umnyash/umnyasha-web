@@ -1,0 +1,14 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод fill'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b fill(fillRule)] — заполнить текущий путь.
+      ul
+        li #[a(href='fill-rule.html') fillRule] — (необязательный) алгоритм правила заполнения.
+      p Если путь или какая-то его часть не закрыта, то заполнение происходит так, будто они закрыты прямой линией.

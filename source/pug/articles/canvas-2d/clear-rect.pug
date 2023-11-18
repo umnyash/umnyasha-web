@@ -1,0 +1,14 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод clearRect'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b clearRect(x, y, width, height)] — очистить прямоугольную область, сделав её полностью прозрачной.
+      ul
+        li #[b x], #[b y] — положение верхнего левого угла прямоугольника.
+        li #[b width], #[b height] — размеры прямоугольника (ширина, высота).

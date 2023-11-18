@@ -1,0 +1,11 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод bezierCurveTo'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)] — добавить кубическую кривую Безье от текущей позиции к точке (#[b x], #[b y]) с контрольными точками (#[b cp1x], #[b cp1y]) и (#[b cp2x], #[b cp2y]).

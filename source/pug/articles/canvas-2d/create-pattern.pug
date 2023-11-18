@@ -1,0 +1,30 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод createPattern'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b createPattern(image, repetition)] — создать паттерн.
+      ul
+        li #[b image] — изображение, которое будет использоваться в качестве паттерна.
+        li #[b repetition] — режим использования паттерна.
+      p Значения #[b image]:
+      ul
+        li #[b HTMLImageElement] — изображения, созданные с помощью конструктора #[b Image()], а также любого элемента #[b &lt;img&gt;].
+        li #[b SVGImageElement] — изображения встроенные с помощью #[b &lt;image&gt;] (этот тег используется для встраивания svg и растровых изображений внутрь тега #[b &lt;svg&gt;&lt;/svg&gt;]).
+        li #[b HTMLVideoElement] — использование HTML-элемента #[b &lt;video&gt;&lt;/video&gt;] в качестве источника изображения захватывает текущий кадр из видео и использует его в качестве изображения.
+        li #[b HTMLCanvasElement] — другой Canvas.
+        li #[b ImageBitmap] — обрезанное растровое изобржение. Такой тип используется для извлечения изображения из спрайта.
+        li #[b OffscreenCanvas] — особый вид Canvas, который не отображается и подготавливается без отображения.
+        li #[b VideoFrame] — изображение, представляющее один кадр видео.
+      p Значения #[b repetition]:
+      ul
+        li #[b repeat] — паттерн будет повторяться во всех направлениях.
+        li #[b repeat-x] — паттерн будет повторяться в направлении оси X.
+        li #[b repeat-y] — паттерн будет повторяться в направлении оси Y.
+        li #[b no-repeat] — паттерн не будет повторяться.
+        li #[b ''] или #[b null] — аналогично #[b repeat].

@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство textAlign'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b textAlign] — выравнивание текста относительно своей позиции #[b x].
+      ul
+        li #[b left] — текст располагается справа от #[b x].
+        li #[b right] — текст располагается слева от #[b x].
+        li #[b center] — текст центрируется относительно #[b x].
+        li #[b start] — (значение по умолчанию) текст располагается справа от #[b x] для языков с письмом слева-направо, а для языков с письмом справа-налево текст располагается слева от #[b x].
+        li #[b end] — как #[b start] только наоборот.

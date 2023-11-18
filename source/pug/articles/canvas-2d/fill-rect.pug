@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод fillRect'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b fillRect(x, y, width, height)] — нарисовать заполненный прямоугольник.
+      ul
+        li #[b x], #[b y] — положение верхнего левого угла прямоугольника.
+        li #[b width], #[b height] — размеры прямоугольника (ширина, высота).
+      p Метод #[b fillRect] не перемещает перо и оно остаётся в той же позиции, что и до вызова этого метода.

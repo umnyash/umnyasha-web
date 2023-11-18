@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод closePath'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b closePath()] — закрыть путь, добавив прямую линию от текущей позиции к началу последней неразрывной части пути (разрывы могут быть созданы методом #[a(href='move-to.html') moveTo]).
+      p Если путь уже закрыт или является просто точкой, то функция ничего не делает.

@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Радиан'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p #[dfn Радиан] — угол, соответствующий дуге, длина которой равна её радиусу.
+      p Длина дуги всей окружности равна 2&pi; (~6.28 радиан), а половина дуги равна &pi; (~3.14 радиан).
+      p Для перевода градусов в радианы можно использовать JavaScript-выражение:
+      pre
+        code.
+          radians = (Math.PI / 180) * degrees;
+      p Нулю радиан соответствует точка в 3 часа.

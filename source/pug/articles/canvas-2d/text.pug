@@ -1,0 +1,24 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Текст'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      ul
+        li #[a(href='fill-text.html') fillText] — нарисовать текст, символы которого заполнены.
+        li #[a(href='stroke-text.html') strokeText] — нарисовать текст, символы которого обведены.
+      p Параметры шрифта:
+      ul
+        li #[a(href='font.html') font] — параметры шрифта.
+      p Позиционирование:
+      ul
+        li #[a(href='direction.html') direction] — направление текста.
+        li #[a(href='text-align.html') textAlign] — горизонтальное выравнивание.
+        li #[a(href='text-baseline.html') textBaseline] — базовая линия текста.
+      p Метрики:
+      ul
+        li #[a(href='measure-text.html') measureText] — получить метрики текста.

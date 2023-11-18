@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Трансформации'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Методы трансформации позволяют переместить начало координат в другое положение, повернуть сетку координат и даже масштабировать её.
+      ul
+        li #[a(href='translate.html') translate] — переместить начало координат.
+        li #[a(href='rotate.html') rotate] — повернуть координатную сетку.
+        li #[a(href='scale.html') scale] — масштабировать координатную сетку.
+        li #[a(href='transform.html') transform] — умножить текущую трансформацию на матрицу.
+        li #[a(href='set-transform.html') setTransform] — умножить трансформацию на матрицу, предварительно сбросив её в единичную матрицу.
+        li #[a(href='reset-transform.html') resetTransform] — сбросить текущую трансформацию в единичную матрицу.

@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство shadowOffsetY'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b shadowOffsetY] — сдвиг тени по оси Y.
+      p Значения:
+      ul
+        li Целые и дробные числа.
+      p Значение по умолчанию — #[b 0].

@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Основы Less'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p #[a(href='https://lesscss.org' target='_blank' rel='nofollow noopener') Официальный сайт]
+      p #[a(href='https://www.lesstester.com' target='_blank' rel='nofollow noopener') Тестирование less]
+      h2 Переменные
+      p #[code @переменная]
+      h2 Интерполяция
+      p #[code @{выражение}]

@@ -1,0 +1,39 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Создание фигур'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p В отличие от SVG, Canvas поддерживает только одну примитивную фигуру: прямоугольник. Все другие фигуры должны быть созданы комбинацией одного или большего количества путей (наборов точек, соединённых линиями).
+      h2 Создание фигур с помощью путей
+      p Создание фигур используя пути происходит в несколько шагов:
+      ol
+        li Открытие нового пути.
+        li Создание подпутей, которые будут являться частями пути и сформируют фигуру.
+        li Обводка и/или заливка пути, чтобы отобразить фигуру.
+      h3 Новый путь
+      ul
+        li #[a(href='../canvas-2d/begin-path.html') beginPath] — начать новый путь.
+      h3 Методы создания подпутей
+      ul
+        li #[a(href='move-to.html') moveTo] — переместить перо.
+        li #[a(href='line-to.html') lineTo] — добавить линию.
+        li #[a(href='close-path.html') closePath] — закрыть путь.
+        li #[a(href='rect.html') rect] — добавить прямоугольник.
+        li #[a(href='arc.html') arc] — добавить дугу вдоль окружности.
+        li #[a(href='arc-to.html') arcTo] — добавить дугу, скругляющую угол.
+        li #[a(href='quadratic-curve-to.html') quadraticCurveTo] — добавить квадратичную кривую Безье.
+        li #[a(href='bezier-curve-to.html') bezierCurveTo] — добавить кубическую кривую Безье.
+      h3 Отображение пути
+      ul
+        li #[a(href='stroke.html') stroke] — обвести текущий путь.
+        li #[a(href='fill.html') fill] — заполнить текущий путь.
+      h2 Рисование прямоугольников
+      ul
+        li #[a(href='fill-rect.html') fillRect] — нарисовать заполненный прямоугольник.
+        li #[a(href='stroke-rect.html') strokeRect] — нарисовать обведённый прямоугольник.
+        li #[a(href='clear-rect.html') clearRect] — очистить прямоугольную область.

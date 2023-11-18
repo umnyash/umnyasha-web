@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство fillStyle'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b fillStyle] — стиль заполнителя.
+      p Используется при заполнении фигур и текста.
+      p Значения:
+      ul
+        li Цвет в любом CSS-формате.
+        li #[a(href='gradients-and-patterns.html') Градиент или паттерн].

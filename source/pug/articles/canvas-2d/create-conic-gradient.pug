@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод createConicGradient'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b createConicGradient(angle, x, y)] — создать конический градиент.
+      p Серцем конического градиента является круг, в котором цвета переходят по секторам.
+      p #[dfn Сектор] — часть круга, ограниченная дугой и двумя радиусами.
+      ul
+        li #[b x], #[b y] — координаты центра круга.
+        li #[b angle] — угол начала градиента в #[a(href='../canvas/radian.html') радианах].

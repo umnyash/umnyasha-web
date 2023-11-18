@@ -1,0 +1,42 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод addColorStop'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b addColorStop(position, color)] — добавить колорстоп.
+      ul
+        li #[b postion] — относительная позиция цвета в сердце градиента. Принимает значения от #[b 0] (начало) до #[b 1] (конец).
+        li #[b color] — цвет в любом CSS-формате.
+      p Метод вызывается у созданного градиента.
+      p Пример:
+      pre
+        code.
+          const gradient = ctx.createLinearGradient(0, 0, 0, 100);
+          gradient.addColorStop(0, 'black');
+          gradient.addColorStop(0.5, 'pink');
+          gradient.addColorStop(0.5, 'red');
+          gradient.addColorStop(1, 'green');
+      figure
+        canvas#canvas(width='200' height='100')
+  script.
+    function draw() {
+      const canvas = document.querySelector('#canvas');
+      if (canvas.getContext) {
+        const ctx = canvas.getContext('2d');
+
+        const gradient = ctx.createLinearGradient(0, 0, 0, 100);
+        gradient.addColorStop(0, 'black');
+        gradient.addColorStop(0.5, 'pink');
+        gradient.addColorStop(0.5, 'red');
+        gradient.addColorStop(1, 'green');
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 200, 100);
+      }
+    }
+    draw()

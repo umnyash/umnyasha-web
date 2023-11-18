@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод fillText'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b fillText(text, x, y, maxWidth)] — нарисовать текст, символы которого заполнены.
+      ul
+        li #[b text] — строка текста.
+        li #[b x], #[b y] — позиция текста.
+        li #[b maxWidth] — (необязательный) максимальная ширина текста. Если текст шире, то будет сплющен.

@@ -1,0 +1,13 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод createLinearGradient'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b createLinearGradient(x1, y1, x2, y2)] — создать линейный градиент.
+      p Сердцем линейного градиента является вектор от (#[b x1], #[b y1]) до (#[b x2], #[b y2]).
+      p Части градиента до и после вектора заполняются цветами ближайших колорстопов.

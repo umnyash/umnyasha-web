@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдоэлемент first-letter'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдоэлемент #[b first-letter] используется для стилизации первого символа текста.
+      p Пример:
+      pre
+        code.
+          p::first-letter {
+            color: red;
+          }

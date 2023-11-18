@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство lineDashOffset'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b lineDashOffset] — сдвиг паттерна обводки.
+      p Положительные числа сдвигают паттерн назад, а отрицательные — вперёд. Это похоже на движение гусеницы танка.

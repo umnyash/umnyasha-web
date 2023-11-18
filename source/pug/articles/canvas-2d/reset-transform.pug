@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод resetTransform'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b resetTransform()] — сбросить текущую трансформацию в единичную матрицу.
+      p Метод аналогичен вызову #[a(href='set-transform.html') setTransform(1, 0, 0, 1, 0, 0)].

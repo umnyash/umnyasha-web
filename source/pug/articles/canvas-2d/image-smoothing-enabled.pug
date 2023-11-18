@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство imageSmoothingEnabled'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b imageSmoothingEnabled] — сглаживание изображений при масштабировании.
+      p Значения:
+      ul
+        li #[b true] — (по умолчанию) включено.
+        li #[b false] — отключено.
+      p Это свойство полезно для игр и других приложений, использующих пиксельную графику. При увеличении изображений алгоритм изменения размера по умолчанию размывает пиксели. Установите значение #[b false], чтобы сохранить резкость пикселей.
+

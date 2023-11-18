@@ -1,0 +1,19 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод transform'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b transform(a, b, c, d, e, f)] — умножить текущую трансформацию на матрицу, описанную аргументами.
+      ul
+        li #[b a] — (m11) масштабирование по оси X.
+        li #[b b] — (m12) наклон по оси X.
+        li #[b c] — (m21) наклон по оси Y.
+        li #[b d] — (m22) масштабирование по оси Y.
+        li #[b e] — (dx) перемещение по оси X.
+        li #[b f] — (dy) перемещение по оси Y.
+      p Это позволяет масштабировать, вращать, переводить (перемещать) и наклонять сетку координат.

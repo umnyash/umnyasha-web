@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод strokeText'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b strokeText(text, x, y, maxWidth)] — нарисовать текст, символы которого обведены.
+      ul
+        li #[b text] — строка текста.
+        li #[b x], #[b y] — позиция текста.
+        li #[b maxWidth] — (необязательный) максимальная ширина текста. Если текст шире, то будет сплющен.

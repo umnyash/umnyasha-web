@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство strokeStyle'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b strokeStyle] — стиль обводки.
+      p Используется при обводке фигур и текста.
+      p Значения:
+      ul
+        li Цвет в любом CSS-формате.
+        li #[a(href='gradients-and-patterns.html') Градиент или паттерн].

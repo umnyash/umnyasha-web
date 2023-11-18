@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод arc'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b arc(x, y, radius, startAngle, endAngle, anticlockwise)] — добавить дугу вдоль окружности.
+      ul
+        li #[b x], #[b y] — координаты центра окружности.
+        li #[b radius] — радиус окружности.
+        li #[b startAngle], #[b endAngle] — углы в #[a(href='../canvas/radian.html') радианах], задающие начальную и конечную точки дуги на окружности.
+        li #[b anticlockwise] — направление дуги: по часовой стрелке (#[b false]) или против (#[b true]). По умолчанию #[b true].
+      p Начало дуги автоматически соединяется прямой линией с текущей позицией, если она определна.

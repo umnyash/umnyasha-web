@@ -1,0 +1,31 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Применение стилей'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Обводка и заполнение:
+      ul
+        li #[a(href='stroke-style.html') strokeStyle] — стиль обводки.
+        li #[a(href='fill-style.html') fillStyle] — стиль заполнителя.
+      p Стили линий:
+      ul
+        li #[a(href='line-width.html') lineWidth] — ширина обводки.
+        li #[a(href='line-cap.html') lineCap] — стиль концов линий.
+        li #[a(href='line-join.html') lineJoin] — соединение линий.
+        li #[a(href='miter-limit.html') miterLimit] — коэффициент максимальной ширины miter-соединения линий.
+        li #[a(href='set-line-dash.html') setLineDash] / #[a(href='get-line-dash.html') getLineDash] — установить / получить паттерн прерывистости обводки.
+        li #[a(href='line-dash-offset.html') lineDashOffset] — сдвиг паттерна обводки.
+      p Прозрачность:
+      ul
+        li #[a(href='global-alpha.html') globalAlpha] — уровень непрозрачности.
+      p Тени:
+      ul
+        li #[a(href='shadow-offset-x.html') shadowOffsetX] — сдвиг тени по оси X.
+        li #[a(href='shadow-offset-y.html') shadowOffsetY] — сдвиг тени по оси Y.
+        li #[a(href='shadow-blur.html') shadowBlur] — размытие тени.
+        li #[a(href='shadow-color.html') shadowColor] — цвет тени.

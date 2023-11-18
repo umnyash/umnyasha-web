@@ -1,0 +1,11 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод translate'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b translate(x, y)] — переместить начало координат на #[b x] пикселей по оси X, и на #[b y] по оси Y.

@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод stroke'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Метод #[b stroke()] — обвести текущий путь.
+      p Обводка центрируется относительно пути. Например, при толщине обводки в #[b 2px], обводка расположится на #[b 1px] по обеим сторонам от обводки.
