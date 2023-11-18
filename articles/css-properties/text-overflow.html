@@ -1,0 +1,19 @@
+<!DOCTYPE html><html class="page" lang="ru"><head><meta charset="utf-8"><title>Свойство text-overflow</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="../../css/style.min.css"></head><body class="page__body"><div class="page__inner"><header class="page-header"><div class="container"><a class="logo" href="../../index.html">Umnyasha Web</a></div></header><main><article class="article container"><h1>Свойство text-overflow</h1><p>Свойство <b>text-overflow</b> позволяет определить, как будет выглядеть текст, который не помещается полностью.</p><p>Значения:</p><ul><li><b>clip</b> — (по умолчанию) текст просто обрезается.</li><li><b>ellipsis</b> — текст обрезается и к концу строки добавляется многоточие.</li></ul><p>Для удобства пользователя элементу можно добавить атрибут <a href="../html-attributes/title.html">title</a> с полным текстом.</p><p>Требования для применения:</p><ul><li>Определено максимальное количество строк.</li><li>Значение свойства <b>overflow</b> установлено как <b>auto</b>, <b>scroll</b> или <b>hidden</b>.</li></ul><h2>Пример однострочного текста</h2><p>Чтобы сделать текст однострочным можно использовать свойство <b>white-space</b> со значением <b>nowrap</b>:</p><pre><code>p {
+  width: 200px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background: lightblue;
+  overflow: hidden;
+}</code></pre><figure><p style="width: 200px; padding: 4px 8px; border-radius: 4px; white-space: nowrap; text-overflow: ellipsis; background: lightblue; overflow: hidden;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></figure><h2>Пример многострочного текста</h2><p>Чтобы задать максимальное количество строк понадобятся <b>display: -webkit-box</b>, <b>-webkit-box-orient: vertical</b> и <b>-webkit-line-clamp</b>.</p><pre><code>p {
+  display: -webkit-box;
+  width: 200px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  -webkit-line-clamp: 3; /* количество строк */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  background: lightblue;
+  overflow: hidden;
+}</code></pre><figure><p style="display: -webkit-box; width: 200px; padding: 4px 8px; border-radius: 4px; -webkit-line-clamp: 3; -webkit-box-orient: vertical; text-overflow: ellipsis; background: lightblue; overflow: hidden;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></figure></article></main><footer class="page-footer"><div class="container">=^-^=</div></footer></div></body></html>
