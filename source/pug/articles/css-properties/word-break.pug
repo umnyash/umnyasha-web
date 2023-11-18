@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство word-break'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b word-break] управляет переносом слов, которые не помещаются по ширине.
+      p Значения:
+      ul
+        li #[b normal] — (по умолчанию) непомещающаяся часть слова отображается за пределами элемента.
+        li #[b break-word] — непомещающаяся часть слова переносится на новую строку.
+        li #[b break-all] — непомещающаяся часть слова переносится на новую строку, даже если слово могло бы быть перенесено целиком.

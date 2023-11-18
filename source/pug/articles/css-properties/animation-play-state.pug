@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство animation-play-state'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b animation-play-state] задаёт состояние анимации.
+      p Значения:
+        ul
+          li #[b running] — выполняется.
+          li #[b paused] — приостановлена.

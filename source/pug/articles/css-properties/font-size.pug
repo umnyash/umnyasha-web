@@ -1,0 +1,28 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство font-size'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b font-size] задаёт размер шрифта.
+      p Значения:
+      ul
+        li Значение в относительных или абсолютных единицах измерения.
+        li Ключевое слово.
+      p Ключевые слова для абсолютных значений (по возрастанию):
+      ol
+        li #[b xx-small].
+        li #[b x-small].
+        li #[b small].
+        li #[b medium].
+        li #[b large].
+        li #[b x-large].
+        li #[b xx-large].
+      p Ключевые слова для относительных значений:
+      ul
+        li #[b larger].
+        li #[b smaller].

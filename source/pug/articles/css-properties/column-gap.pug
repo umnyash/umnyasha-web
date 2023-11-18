@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство column-gap'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b column-gap] задаёт промежуток между колонками.
+      p Значения:
+      ul
+        li Значение в относительных или абсолютных единицах измерения.
+      p Значение по умолчанию #[b 1em].

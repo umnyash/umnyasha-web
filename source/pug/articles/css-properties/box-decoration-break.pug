@@ -1,0 +1,30 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство box-decoration-break'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b box-decoration-break] задаёт вариант стилизации элемента, расположившегося на нескольких строках.
+      p Значения:
+      ul
+        li #[b slice] — (по умолчанию) в местах разрыва элемент как бы обрезается.
+        li #[b clone] — части элемента на разных строках стилизуются независимо.
+      p Пример:
+      pre
+        code.
+          a {
+            padding: 3px 4px;
+            text-decoration: none;
+            color: #a935f0;
+            background-color: #fbf5fe;
+            border-radius: 6px;
+            border: 1px solid #a935f0;
+          }
+      p slice
+        img(src='../../img/box-decoration-break-slice.png' width='960' height='186' alt='')
+      p clone
+        img(src='../../img/box-decoration-break-clone.png' width='960' height='186' alt='')

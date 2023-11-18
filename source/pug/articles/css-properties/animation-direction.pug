@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство animation-direction'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b animation-direction] задаёт направление анимации.
+      p Значения:
+        ul
+          li #[b normal] — (по умолчанию) от начала к концу.
+          li #[b reverse] — от конца к началу.
+          li #[b alternate] — нечётные итерации выполняются в прямом направлении, чётные — в обратном.
+          li #[b alternate-reverse] — нечётные итерации выполняются в обратном направлении, чётные — в прямом.

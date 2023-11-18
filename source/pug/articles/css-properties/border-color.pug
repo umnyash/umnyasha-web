@@ -1,0 +1,14 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство border-color'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b border-color] задаёт цвет рамки.
+      p Значения:
+      ul
+        li Цвет в любом CSS-формате.

@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство max-height'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b max-height] задаёт максимальную высоту элемента.
+      p Значения:
+      ul
+        li Значение в относительных или абсолютных единицах измерения.
+        li #[b none] — (по умолчанию) без ограничения.

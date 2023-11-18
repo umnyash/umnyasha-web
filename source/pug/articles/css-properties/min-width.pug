@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство min-width'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b min-width] задаёт минимальную ширину элемента.
+      p Значения:
+      ul
+        li Значение в относительных или абсолютных единицах измерения.
+        li #[b auto] — (по умолчанию) миминимальную ширину выберет браузер.

@@ -1,0 +1,20 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство letter-spacing'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b letter-spacing] увеличивает межсимвольное расстояние на заданную величину.
+      p Значения:
+      ul
+        li Значение в относительных или абсолютных единицах измерения.
+        li #[b normal] — (по умолчанию) соотвествует #[b 0].
+      p Значения в #[b %] не поддерживаются, но их можно задать с помощью #[b em]:
+      pre
+        code.
+          letter-spacing: 0.05em; /* равнозначно 5% */
+      p Допустимы отрицательные значения.

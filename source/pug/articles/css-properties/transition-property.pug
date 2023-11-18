@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство transition-property'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b transition-property] задаёт свойства, к которым будет применён переход.
+      p Значения:
+        ul
+          li Одно или несколько css-свойств, перечисленных через запятую.
+          li #[b all] — (по умолчанию) все свойства.
+          li #[b none] — не применять переход ни к чему.

@@ -1,0 +1,52 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство text-overflow'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b text-overflow] позволяет определить, как будет выглядеть текст, который не помещается полностью.
+      p Значения:
+      ul
+        li #[b clip] — (по умолчанию) текст просто обрезается.
+        li #[b ellipsis] — текст обрезается и к концу строки добавляется многоточие.
+      p Для удобства пользователя элементу можно добавить атрибут #[a(href='../html-attributes/title.html') title] с полным текстом.
+      p Требования для применения:
+      ul
+        li Определено максимальное количество строк.
+        li Значение свойства #[b overflow] установлено как #[b auto], #[b scroll] или #[b hidden].
+      h2 Пример однострочного текста
+      p Чтобы сделать текст однострочным можно использовать свойство #[b white-space] со значением #[b nowrap]:
+      pre
+        code.
+          p {
+            width: 200px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            background: lightblue;
+            overflow: hidden;
+          }
+      figure
+        p(style='width: 200px; padding: 4px 8px; border-radius: 4px; white-space: nowrap; text-overflow: ellipsis; background: lightblue; overflow: hidden;') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      h2 Пример многострочного текста
+      p Чтобы задать максимальное количество строк понадобятся #[b display: -webkit-box], #[b -webkit-box-orient: vertical] и #[b -webkit-line-clamp].
+      pre
+        code.
+          p {
+            display: -webkit-box;
+            width: 200px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            -webkit-line-clamp: 3; /* количество строк */
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            background: lightblue;
+            overflow: hidden;
+          }
+      figure
+        p(style='display: -webkit-box; width: 200px; padding: 4px 8px; border-radius: 4px; -webkit-line-clamp: 3; -webkit-box-orient: vertical; text-overflow: ellipsis; background: lightblue; overflow: hidden;') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

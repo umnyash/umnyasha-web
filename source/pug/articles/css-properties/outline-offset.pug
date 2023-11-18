@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство outline-offset'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b outline-offset] задаёт отступ внешней рамки.
+      p Значения:
+      ul
+        li Значение в любых единицах длины, кроме #[b %].
+      p Положительное значение отодвигает рамку от внешнего края элемента, а отрицательное — «втягивает» внутрь.

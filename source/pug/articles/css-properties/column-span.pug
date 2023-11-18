@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство column-span'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b column-span] задаёт охват колонок для потомка того элемента, которому задана колоночность.
+      p Значения:
+      ul
+        li #[b none] — (по умолчанию) элемент располагается в одной колонке.
+        li #[b all] — элемент занимает все колонки.

@@ -1,0 +1,19 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство border-image-source'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b border-image-source] задаёт фоновое изображение рамки.
+      p Значения:
+      ul
+        li Адрес изображения внутри #[b url("...")].
+      p Пример:
+      pre
+        code.
+          border-image-source: url("img/sky.jpg");
+      p По умолчанию изображением заполняются только углы рамки. Изменить это можно с помощью свойства #[a(href='border-image-slice.html') border-image-slice].

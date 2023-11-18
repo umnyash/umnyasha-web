@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство background-color'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b background-color] задаёт фоновый цвет.
+      p Значения:
+      ul
+        li Цвет в любом CSS-формате.
+      p Пример:
+      pre
+        code.
+          background-color: deepskyblue;

@@ -1,0 +1,22 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство columns'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b columns] задаёт количество колонок и их минимальную ширину.
+      p Составное свойство:
+      ul
+        li #[a(href='column-count.html') column-count] — количество.
+        li #[a(href='column-width.html') column-width] — ширина.
+      p Значения:
+      ul
+        li Параметры колонок, перечисленные через пробел.
+      p Пример:
+      pre
+        code.
+          columns: 12em 2;

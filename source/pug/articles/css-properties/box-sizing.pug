@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство box-sizing'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b box-sizing] задаёт алгоритм расчёта ширины и высоты бокса.
+      p Значения:
+      ul
+        li #[b content-box] — (по умолчанию) размеры, указанные в свойствах #[b width] и #[b height] не включают в себя ширину рамок и внутренних отступов.
+        li #[b border-box] — размеры, указанные в свойствах #[b width] и #[b height] включают в себя ширину рамок и внутренних отступов.

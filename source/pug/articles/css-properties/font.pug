@@ -1,0 +1,37 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство font'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b font] задаёт основые параметры шрифта.
+      p Составное свойство:
+      ul
+        li #[a(href='font-family.html') font-family] — семейство.
+        li #[a(href='font-size.html') font-size] — размер.
+        li #[a(href='line-height.html') line-height] — высота.
+        li #[a(href='font-weight.html') font-weight] — толщина.
+        li #[a(href='font-style.html') font-style] — стиль.
+        li #[a(href='font-variant.html') font-variant] — вариант отображения символов.
+      p Значения:
+      ul
+        li Параметры шрифта, перечисленные через пробел.
+      p Обязательными параметрами являются значения размера и семейства шрифта:
+      pre
+        code.
+          font: 20px "PT Sans", "Arial", sans-serif;
+      p #[strong Высота строки всегда указывается сразу после размера шрифта через слэш (#[b /]). Значение высоты строки #[b auto] недопустимо использовать в этом свойстве. Значение размера шрифта или пара размер шрифта/высота строки всегда указываются непосредственно перед семейством шрифта:]
+      pre
+        code.
+          font: 20px "Georgia", serif;
+          font: 20px/30px "Georgia", serif;
+      p Остальные параметры (толщина, стиль, вариант) могут указываться в произвольном порядке до размера шрифта:
+      pre
+        code.
+          font: bold 20px "Verdana", sans-serif;
+          font: small-caps 700 italic 20px/30px "Georgia", serif;
+          font: italic small-caps 700 20px/30px "Georgia", serif;

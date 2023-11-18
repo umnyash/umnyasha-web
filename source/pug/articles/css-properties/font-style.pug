@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство font-style'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b font-style] задаёт стиль начертания шрифта.
+      p Значения:
+      ul
+        li #[b normal] — (по умолчанию) обычное начертание.
+        li #[b italic] — курсивное начертание.
+        li #[b oblique] — наклонное начертание.
+      p При значении #[b italic] браузер попытается найти в заданном шрифте отдельное курсивное начертание символов. Если это не удастся, браузер сымитирует курсив, сделав текст наклонным, как при значении #[b oblique].

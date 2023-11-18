@@ -1,0 +1,23 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство column-rule'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b column-rule] задаёт стили разделительной линии между колонками.
+      p Составное свойство:
+      ul
+        li #[a column-rule-width] — ширина.
+        li #[a column-rule-style] — стиль.
+        li #[a column-rule-color] — цвет.
+      p Значения:
+      ul
+        li Параметры разделительной линии, перечисленные через пробел.
+      p Пример:
+      pre
+        code.
+          column-rule: 1px solid #cccccc;

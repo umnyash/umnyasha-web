@@ -1,0 +1,25 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство transition'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b transition] задаёт параметры перехода.
+      p Составное свойство:
+        ul
+          li #[a(href='transition-property.html') transition-property] — свойство.
+          li #[a(href='transition-duration.html') transition-duration] — длительность.
+          li #[a(href='transition-timing-function.html') transition-timing-function] — темп.
+          li #[a(href='transition-delay.html') transition-delay] — задержка.
+      p Значения:
+      ul
+        li Перечисленные через пробел параметры для одного или нескольких переходов, перечисленных через запятую.
+      p Пример:
+      pre
+        code.
+          transition: width 1s ease-in 2s;
+          transition: width 1s ease-in 2s, height 2s ease-out 1s;

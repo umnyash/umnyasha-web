@@ -1,0 +1,22 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство line-height'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b line-height] задаёт высоту строки.
+      p Значения:
+      ul
+        li #[b normal] — (по умолчанию) соотвествует #[b 100–120%].
+        li Значение в относительных или абсолютных единицах измерения.
+        li Множитель.
+      p Относительные значения вычисляются от размера шрифта элемента.
+      p Пример:
+      pre
+        code.
+          font-size: 10px;
+          line-height: 2; /* Вычисленное значение: 10px * 2 = 20px */

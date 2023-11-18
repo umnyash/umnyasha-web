@@ -1,0 +1,50 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство background-posititon'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b background-position] задаёт позицию фонового изображения.
+      p В качестве значения принимает два аргумента: позицию по горизонтали и позицию по вертикали.
+      p Расположение по горизонтали можно задать ключевыми словами #[b left], #[b center] и #[b right], а расположение по вертикали — словами #[b top], #[b center] и #[b bottom].
+      p Помимо ключевых слов можно использовать значения в пикселях и процентах, в том числе значения отрицательные.
+      p Если аргумент один, то он принимается за позицию по горизонтали, либо за позицию, соответствующую ключевому слову, если оно используется. Второе значение принимается за #[b center].
+      p Значение по умолчанию: #[b 0 0].
+      p Примеры:
+      pre
+        code.
+          /* Картинка по центру. */
+          background-position: center;
+          background-position: 50% 50%;
+
+          /* В левом верхнем углу. */
+          background-position: 0 0;
+
+          /* В левом нижнем углу. */
+          background-position: left bottom;
+          background-position: 0 100%;
+
+          /* На расстоянии 20px от левого края и на 40px от верхнего. */
+          background-position: 20px 40px;
+      h2 Позиция от разных сторон
+      p Позицию фонового изображения можно задавать относительно любого угла блока, а не только от левого верхнего.
+      p Чтобы указать от какой стороны отсчитывать расположение фона, нужно перед значением координат указать ключевые слова: #[b top], #[b right], #[b bottom] или #[b left].
+      p Примеры:
+      pre
+        code.
+          /* Слева 10px, сверху 50px. */
+          background-position: 10px 50px;
+          background-position: left 10px top 50px;
+
+          /* Справа 30px, снизу 60px. */
+          background-position: right 30px bottom 60px;
+
+          /* Слева 50px, снизу 10px. */
+          background-position: left 50px bottom 10px;
+
+          /* Справа 40px, сверху 30px. */
+          background-position: right 40px top 30px;

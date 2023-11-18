@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство animation-timing-function'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b animation-timing-function] задаёт темп анимации.
+      p Значения:
+        ul
+          li Функция #[a(href='../html-and-css/cubic-bezier.html') cubic-bezier] или её псевдоним.
+          li Функция #[a(href='../html-and-css/steps.html') steps] или её псевдоним.

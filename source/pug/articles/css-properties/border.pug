@@ -1,0 +1,24 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство border'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b border] создаёт рамку элемента.
+      p Составное свойство:
+      ul
+        li #[a(href='border-width.html') border-width] — ширина.
+        li #[a(href='border-style.html') border-style] — вид.
+        li #[a(href='border-color.html') border-color] — цвет.
+      p Значения:
+      ul
+        li Параметры рамки, перечисленные через пробел в любом порядке.
+        li #[b none] — удаление рамки.
+      p Пример:
+      pre
+        code.
+          border: 2px solid grey;

@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство list-style-image'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b list-style-image] задаёт картинку, которая будет отображаться вместо маркеров.
+      p Пример:
+      pre
+        code.
+          list-style-image: url("rocket.svg");
+      p Если картинка не загрузится, то отобразится заданный маркер.
+      p #[strong Если вид списка требует иконок, лучше вставлять их как фон для элементов списка или их псевдоэлементов.]

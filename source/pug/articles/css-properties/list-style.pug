@@ -1,0 +1,25 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство list-style'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b list-style] задаёт стили маркеров списка.
+      p Составное свойство:
+      ul
+        li #[a(href='list-style-type.html') list-style-type] — вид маркера или номера.
+        li #[a(href='list-style-image.html') list-style-image] — картинка, которая будет отображаться вместо маркера.
+        li #[a(href='list-style-position.html') list-style-position] — позиция маркера, относительно элемента списка.
+      p Значения:
+      ul
+        li Перечисленные через пробел в любом порядке значения стилей.
+        li #[b none] — удаление маркеров.
+      p Пример:
+      pre
+        code.
+          list-style: upper-roman inside url("rocket.svg");
+          list-style: none;

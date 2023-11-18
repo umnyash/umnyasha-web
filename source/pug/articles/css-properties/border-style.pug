@@ -1,0 +1,23 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство border-style'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b border-style] задаёт вид рамки.
+      p Значения:
+      ul
+        li #[b dotted].
+        li #[b dashed].
+        li #[b solid].
+        li #[b double].
+        li #[b groove].
+        li #[b ridge].
+        li #[b inset].
+        li #[b outset].
+      p
+        img(src='../../img/border-styles.png' width='1314' height='116' alt='')

@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство background-origin'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b background-origin] определяет относительно чего позиционируется фоновое изображение.
+      p Значения:
+      ul
+        li #[b content-box] — относительно области содержимого (не включающей внутренние отступы и рамки).
+        li #[b padding-box] — (по умолчанию) относительно области содержимого и внутренних отступов (не включающей рамки).
+        li #[b border-box] — относительно области содержимого, внутренних отступов и рамок.

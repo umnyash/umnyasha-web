@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство font-variant'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b font-variant] задаёт вариант отображения символов.
+      p Значения:
+      ul
+        li #[b normal] — (по умолчанию) исходный регистр символов.
+        li #[b small-caps] — превращает строчные символы в заглавные, размером со строчные.
+        li #[b all-small-caps] — превращает все символы в заглавные, размером со строчные.

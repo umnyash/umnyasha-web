@@ -1,0 +1,27 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство list-style-type'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b list-style-type] задаёт вид номеров/маркеров в упорядоченных и неупорядоченных списках.
+      ul
+        li #[b none] — удаление номеров/маркеров. При этом занимаемое ими место не резервируется.
+      p Значения неупорядоченные:
+      ul
+        li #[b disc] — (по умолчанию) закрашенный круг.
+        li #[b circle] — незакрашенный круг.
+        li #[b square] — квадрат.
+      p Значения упорядоченные:
+      ul
+        li #[b decimal] — (по умолчанию) обычные арабские цифры.
+        li #[b decimal-leading-zero] — арабские цифры, до десятков будут писаться с нулём в начале.
+        li #[b lower-greek] — строчные буквы греческого алфавита.
+        li #[b lower-latin] — строчные буквы латинского алфавита.
+        li #[b lower-roman] — строчные римские цифры.
+        li #[b upper-latin] — прописные буквы латинского алфавита.
+        li #[b upper-roman] — прописные римские цифры.

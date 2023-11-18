@@ -1,0 +1,15 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство text-decoration-color'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b text-decoration-color] задаёт цвет декоративной линни.
+      p Значения:
+      ul
+        li Цвет в любом CSS-формате.
+      p По умолчанию цвет линии такой же, как цвет текста.

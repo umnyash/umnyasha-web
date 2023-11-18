@@ -1,0 +1,33 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство background'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b background] параметры фона.
+      p Составное свойство:
+        ul
+          li #[a(href='background-color.html') background-color] — цвет.
+          li #[a(href='background-image.html') background-image] — изображение.
+          li #[a(href='background-repeat.html') background-repeat] — повтор.
+          li #[a(href='background-attachment.html') background-attachment] — привязка.
+          li #[a(href='background-origin.html') background-origin] — позиционирование.
+          li #[a(href='background-clip.html') background-clip] — обрезка.
+          li #[a(href='background-position.html') background-position] — позиция.
+          li #[a(href='background-size.html') background-size] — размер.
+      p Значения:
+      ul
+        li Параметры фона, перечисленные через пробел.
+      p Если какой-то параметр не указан, то берётся значение по умолчанию.
+      p Если в свойстве задана позиция фона и его размер, то эти значения пишутся в самом конце через слеш (#[b /]).
+      p Примеры:
+      pre
+        code.
+          background: #e74c3c;
+          background: url("image.png") no-repeat;
+          background: url("image.png") no-repeat 10px 20px;
+          background: url("image.png") 10px 20px / 300px 300px;

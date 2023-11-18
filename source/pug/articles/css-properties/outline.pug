@@ -1,0 +1,24 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство outline'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b outline] создаёт внешнюю рамку элемента.
+      p Составное свойство:
+      ul
+        li #[a(href='outline-width.html') outline-width] — ширина.
+        li #[a(href='outline-style.html') outline-style] — вид.
+        li #[a(href='outline-color.html') outline-color] — цвет.
+      p Значения:
+      ul
+        li Параметры рамки, перечисленные через пробел в любом порядке.
+        li #[b none] — удаление рамки.
+      p Пример:
+      pre
+        code.
+          outline: 20px dashed green;

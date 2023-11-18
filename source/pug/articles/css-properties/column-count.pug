@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство column-count'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b column-count] задаёт количество колонок.
+      p Значения:
+      ul
+        li Целое положительное число.
+      p Пример:
+      pre
+        code.
+          column-count: 3; /* Текст выстроится в три колонки. */

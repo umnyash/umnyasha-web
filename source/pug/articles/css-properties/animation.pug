@@ -1,0 +1,29 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство animation'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b animation] задаёт параметры анимации.
+      p Составное свойство:
+        ul
+          li #[a(href='animation-name.html') animation-name] — название анимации.
+          li #[a(href='animation-duration.html') animation-duration] — длительность.
+          li #[a(href='animation-timing-function.html') animation-timing-function] — темп.
+          li #[a(href='animation-delay.html') animation-delay] — задержка.
+          li #[a(href='animation-iteration-count.html') animation-iteration-count] — количество итераций.
+          li #[a(href='animation-direction.html') animation-direction] — направление.
+          li #[a(href='animation-fill-mode.html') animation-fill-mode] — режим применения стилей.
+          li #[a(href='animation-play-state.html') animation-play-state] — состояние.
+      p Значения:
+      ul
+        li Перечисленные через пробел параметры для одной или нескольких анимаций, перечисленных через запятую.
+      p Пример:
+      pre
+        code.
+          animation: name-1 1s ease-in 1s 2 reverse both;
+          animation: name-1 1s ease-in 1s 2 reverse both, name-2 4s ease-out 4s 3 alternate forwards;

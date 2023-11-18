@@ -1,0 +1,28 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство text-decoration'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b text-decoration] задаёт стили декоративной линии.
+      p Составное свойство:
+      ul
+        li #[a(href='text-decoration-line.html') text-decoration-line] — тип.
+        li #[a(href='text-decoration-style.html') text-decoration-style] — вид.
+        li #[a(href='text-decoration-color.html') text-decoration-color] — цвет.
+      p Значения:
+      ul
+        li Перечисленные через пробел в любом порядке значения стилей.
+        li #[b none] — удаление линии.
+      p Пример:
+      pre
+        code.
+          text-decoration: underline wavy coral;
+      p Можно задать несколько линий, если их стиль и цвет одинаковые:
+      pre
+        code.
+          text-decoration: overline line-through underline solid green;

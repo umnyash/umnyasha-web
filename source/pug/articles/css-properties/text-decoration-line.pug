@@ -1,0 +1,21 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство text-decoration-line'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b text-decoration-line] задаёт тип декоративной линии.
+      p Значения:
+      ul
+        li #[b underline] — подчёркивание.
+        li #[b line-through] — зачёркивание.
+        li #[b overline] — надчёркивание.
+        li #[b none] — (по умолчанию) отсутствие линии.
+      p Одному элементу можно задать несколько линий, перечислив их через пробел:
+      pre
+        code.
+          text-decoration-line: underline overline line-through;

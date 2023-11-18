@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство text-indent'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b text-indent] задаёт величну отступа первой строки текста.
+      p Значения:
+      ul
+        li Значение в относительных или абсолютных единицах измерения.
+      p При значении в #[b %] отступ вычисляется в зависимости от ширины элемента.
+      p Допустимы отрицательные значения.

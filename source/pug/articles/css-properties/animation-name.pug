@@ -1,0 +1,14 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство animation-name'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b animation-name] задаёт название добавляемой анимации.
+      p Значения:
+        ul
+          li Имя анимации, созданной с помощью #[b @keyframes].

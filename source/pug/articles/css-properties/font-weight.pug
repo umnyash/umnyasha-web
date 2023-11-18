@@ -1,0 +1,36 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство font-weight'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b font-weight] задаёт толщину шрифта.
+      p Значения:
+      ul
+        li Ключевое число.
+        li Ключевое слово.
+      p Ключевые числа:
+      ol
+        li #[b 100] — Thin (Hairline).
+        li #[b 200] — Extra Light (Ultra Light).
+        li #[b 300] — Light.
+        li #[b 400] — Normal (Regular) — обычный шрифт, значение по умолчанию.
+        li #[b 500] — Medium.
+        li #[b 600] — Semi Bold (Demi Bold).
+        li #[b 700] — Bold — жирный шрифт.
+        li #[b 800] — Extra Bold (Ultra Bold).
+        li #[b 900] — Black (Heavy).
+        li #[b 950] — Extra Black (Ultra Black).
+      p Ключевые слова для абсолютных значений:
+      ul
+        li #[b normal] — (по умолчанию) 400.
+        li #[b bold] — 700.
+      p Поскольку ключевые слова есть не для всех значений, то для единообразия лучше их не использовать.
+      p Ключевые слова для относительных значений:
+      ul
+        li #[b lighter].
+        li #[b bolder].

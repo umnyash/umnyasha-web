@@ -1,0 +1,36 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство border-image'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b border-image] задаёт фоновое изображение рамки.
+      p Составное свойство:
+      ol
+        li #[a(href='border-image-source.html') border-image-source] — изображение.
+        li #[a(href='border-image-slice.html') border-image-slice] — нарезка.
+        li #[a(href='border-image-width.html') border-image-width] — ширина.
+        li #[a(href='border-image-outset.html') border-image-outset] — отступ.
+        li #[a(href='border-image-repeat.html') border-image-repeat] — режим заполнения.
+      p Значения:
+      ul
+        li Параметры фонового изображения рамки, перечисленные через пробел.
+      p Сначала
+      p Примеры:
+      pre
+        code.
+          /* source slice */
+          border-image: linear-gradient(red, blue) 27;
+
+          /* source slice repeat */
+          border-image: url("/images/border.png") 27 space;
+
+          /* source slice width */
+          border-image: linear-gradient(red, blue) 27 / 35px;
+
+          /* source slice width outset repeat */
+          border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;

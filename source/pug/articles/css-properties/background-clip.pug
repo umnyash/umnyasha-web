@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство background-clip'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b background-clip] управляет тем, как обрезается фон. Причём обрезается не только фоновое изображение, но и фоновый цвет.
+      p Значения:
+      ul
+        li #[b content-box] — обрезается по внешнему краю области содержимого.
+        li #[b padding-box] — обрезается по внутреннему краю рамки элемента.
+        li #[b border-box] — (по умолчанию) обрезается по внешнему краю рамки элемента.

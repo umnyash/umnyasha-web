@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство text-transform'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b text-transform] задаёт регистр символов.
+      p Значения:
+      ul
+        li #[b none] — (по умолчанию) без изменения регистра.
+        li #[b lowercase] — все строчные.
+        li #[b uppercase] — все заглавные.
+        li #[b capitalize] — каждое слово начинается с заглавной буквы.

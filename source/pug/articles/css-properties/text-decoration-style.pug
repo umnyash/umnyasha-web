@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство text-decoration-style'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b text-decoration-style] задаёт стиль декоративной линии.
+      p Значения:
+      ul
+        li #[b solid] — (по умолчанию) сплошная.
+        li #[b double] — двойная.
+        li #[b dotted] — точечная.
+        li #[b dashed] — пунктирная.
+        li #[b wavy] — волнистая.

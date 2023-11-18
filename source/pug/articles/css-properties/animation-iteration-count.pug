@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство animation-iteration-count'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b animation-iteration-count] задаёт количество итераций анимации.
+      p Значения:
+        ul
+          li Целые положительные числа (по умолчанию #[b 1]).
+          li #[b 0] — анимация не выполнится ни разу.
+          li #[b infinite] — анимация будет выполняться бесконечно.

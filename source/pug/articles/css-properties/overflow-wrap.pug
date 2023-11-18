@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство word-wrap'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b overflow-wrap] управляет переносом слов, которые не помещаются по ширине.
+      p Значения:
+      ul
+        li #[b normal] — (по умолчанию) непомещающаяся часть слова отображается за пределами элемента.
+        li #[b break-word] — непомещающаяся часть слова переносится на новую строку.
+        li #[b anywhere] — непомещающаяся часть слова также переносится на новую строку.
+      p Различие между #[b break-word] и #[b anywhere] в том, как будет вычисляться ширина элемента с текстом при значении #[b min-content]. При значении #[b break-word] слова будут оставаться целыми, а при #[b anywhere] будут разделены.

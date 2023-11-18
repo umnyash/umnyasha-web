@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство border-image-outset'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b border-image-outset] задаёт отступ фонового изображения рамки от её внутренней границы.
+      p Также как и ширину, отступы можно задавать для каждой из сторон.
+      p Примеры:
+      pre
+        code.
+          border-image-outset: 10px;
+          border-image-outset: 10px 20px 30px 40px;

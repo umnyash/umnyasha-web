@@ -1,0 +1,14 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство transition-duration'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b transition-duration] задаёт длительность перехода.
+      p Значения:
+        ul
+          li Одно или несколько значений, перечисленных через запятую, в секундах (#[b s]) или миллисекундах (#[b ms]).

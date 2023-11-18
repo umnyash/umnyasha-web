@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство writing-mode'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b writing-mode] задаёт режим печати текста.
+      p Значения:
+      ul
+        li #[b horizontal-tb] — (по умолчанию) текст печатается слева направо, порядок строк: сверху вниз.
+        li #[b vertical-rl] — текст печатается сверху вниз, порядок строк: справа налево.
+        li #[b vertical-lr] — текст печатается сверху вниз, порядок строк: слева направо.

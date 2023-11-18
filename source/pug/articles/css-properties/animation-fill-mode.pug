@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Свойство animation-fill-mode'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Свойство #[b animation-fill-mode] задаёт режим применения стилей до и после анимации.
+      p Значения:
+        ul
+          li #[b none] — (по умолчанию) не применять. После завершения анимации элемент вернётся в исходное состояние.
+          li #[b backwards] — применить стили первого кадра до начала анимации. Это заметно, если анимация имеет задержку.
+          li #[b forwards] — применить стили последнего кадра по завершении анимации.
+          li #[b both] — совмещает эффект значений #[b backwards] и #[b forwards].
