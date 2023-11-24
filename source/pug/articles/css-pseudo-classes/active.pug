@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс active.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b active] выбирает элемент, на который нажали.
+      p Пример:
+      pre
+        code.
+          button:active {
+            opacity: 0.6;
+          }

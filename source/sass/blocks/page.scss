@@ -3,7 +3,6 @@
   font: 400 16px/28px "Arial", sans-serif;
   color: var(--text-color);
   background-color: var(--background-color);
-  // background-color: burlywood;
 }
 
 .page__inner {
@@ -15,4 +14,5 @@
   grid-template-columns: 100%;
   row-gap: 48px;
   overflow-y: auto;
+  scroll-behavior: smooth;
 }

@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс root.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b root] выбирает корневой элемент дерева документа. В HTML этот селектор выберет элемент &lt;html&gt;&lt;/html&gt;, а в SVG — элемент &lt;svg&gt;&lt;/svg&gt;.
+      p Пример:
+      pre
+        code.
+          :root {
+            --text-color: #333333;
+            --background-color: #ffffff;
+          }

@@ -1,0 +1,43 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдоэлемент before.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдоэлемент #[b before] позволяет с помощью CSS добавить #[i псевдотег] внутрь другого элемента и оформить его.
+      p Содержимое псевдотега задаётся с помощью свойства #[b content].
+      p Например, у нас есть такой HTML:
+      pre
+        code.
+          &lt;div class="queen heart"&gt;
+            &lt;em&gt;Дама&lt;/em&gt;
+          &lt;/div&gt;
+      p Добавим CSS-правило для псевдоэлемента:
+      pre
+        code.
+          .heart::before { content: "Черви"; }
+      p И HTML изменится вот так:
+      pre
+        code.
+          &lt;div class="queen heart"&gt;
+            &lt;before&gt;Черви&lt;/before&gt;
+            &lt;em&gt;Дама&lt;/em&gt;
+          &lt;/div&gt;
+      p Но! Исходный HTML-код не изменится, тег #[b &lt;before&gt;&lt;/before&gt;] не попадёт в код страницы, а будет «виртуально» существовать где-то в браузере. Поэтому мы и используем приставку #[i псевдо].
+      p Ведёт себя псевдотег так же, как обычный #[b &lt;span&gt;&lt;/span&gt;] с текстом. Ему можно задавать дополнительные стили.
+      p Например:
+      pre
+        code.
+          .heart::before {
+            content: "Черви";
+            color: red;
+          }
+      p Чтобы псевдоэлемент появился, ему необходимо задать свойство #[b content]. В значении достаточно даже пустой строки #[b ""]:
+      pre
+        code.
+          content: "";
+      p Псевдоэлемент #[b before] можно использовать одновременно c #[a(href='after.html') after].

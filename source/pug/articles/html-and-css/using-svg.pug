@@ -1,7 +1,7 @@
 extends ../../layout/layout
 
 block variables
-  - var title = 'Использование SVG'
+  - var title = 'Использование SVG.'
   - var pageClass = 'article-page'
 
 block content
@@ -10,7 +10,7 @@ block content
       h1= title
       p Существует несколько способов использования SVG-изображений.
       p При подключении SVG-изображения или SVG-спрайта как отдельного файла, у тега #[b &lt;svg&gt;&lt;/svg&gt;] в подключаемом файле должен быть атрибут #[b xmlns="http://www.w3.org/2000/svg"].
-      h2 Подключение с помощью тега img или в качестве фонового изображения
+      h2 Подключение с помощью тега img или в качестве фонового изображения.
       pre
         code.
           &lt;img src="file.svg" width="300" height="300" alt=""&gt;
@@ -20,7 +20,7 @@ block content
       ul
         li Работают встроеннные стили, а скрипты — нет.
       p Эти способы подходят для статических картинок, так как не предоставляют возможности повлиять на содержимое.
-      h3 data:URI
+      h3 data:URI.
       p #[dfn #[abbr(title='Uniform Resource Identifier') URI]] — способ вставки изображения в закодированном виде с помощью атрибута HTML-элемента или с помощью функции в CSS:
       pre
         code.
@@ -31,7 +31,7 @@ block content
       ul
         li Минимизация запросов к серверу.
       p #[a(href='https://yoksel.github.io/url-encoder/ru' target='_blank' rel='nofollow noopener') URL-encoder for SVG].
-      h2 Подключение с помощью iframe или object
+      h2 Подключение с помощью iframe или object.
       pre
         code.
           &lt;iframe src="file.svg" width="300" height="300"&gt;&lt;/iframe&gt;
@@ -43,11 +43,11 @@ block content
         li Можно управлять из JavaScript.
       p Эти способы подходят для отображения интерактивных SVG.
       p #[strong Подключение с помощью тега #[b &lt;iframe&gt;&lt;/iframe&gt;] идеологически неверно, так как #[b &lt;iframe&gt;&lt;/iframe&gt;] предназначен для встраивания HTML в HTML.]
-      h2 Подключение с помощью embed
+      h2 Подключение с помощью embed.
       pre
         code.
           &lt;embed src="file.svg" width="300" height="300"&gt;
-      h2 Вставка svg-кода в разметку
+      h2 Вставка svg-кода в разметку.
       pre
         code.
           &lt;body&gt;
@@ -61,7 +61,7 @@ block content
       ul
         li Полный контроль над SVG, так как это часть DOM.
       p Если встраиваемое svg-изображение является контентным, то ему стоит задать атрибуты #[b role="img"] и #[b aria-label="Описание."], чтобы скринридеры воспринимали его как обычный тег #[b &lt;img&gt;]. В ином случае, изображение можно от них скрыть атрибутом #[b aria-hidden="true"].
-      h2 Символьные svg-спрайты
+      h2 Символьные svg-спрайты.
       p В SVG есть особый тег #[b &lt;symbol&gt;&lt;/symbol&gt;]. Этот тег не рендерится на странице, и нужен для того, чтобы объявлять символы, которые будут использоваться позднее.
       p У каждого символа должны быть атрибуты #[b id] и #[b viewbox], не должно быть атрибутов #[b width], #[b height].
       p Воспользоваться символом можно с помощью тега #[b &lt;use&gt;&lt;/use&gt;] с атрибутом #[b href="#id_символа"].

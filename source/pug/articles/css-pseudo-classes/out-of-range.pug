@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс out-of-range.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Полям для ввода чисел (#[b &lt;input&gt;] с типом #[b number]) можно задать минимальное и максимальное значения при помощи атрибутов #[b min] и #[b max].
+      p Псевдокласс #[b out-of-range] выбирает все числовые поля формы, значение которых не попадает в заданный диапазон.

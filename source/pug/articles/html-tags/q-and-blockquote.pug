@@ -1,7 +1,7 @@
 extends ../../layout/layout
 
 block variables
-  - var title = 'Цитаты'
+  - var title = 'Цитаты.'
   - var pageClass = 'article-page'
 
 block content
@@ -9,7 +9,7 @@ block content
     article.article.container
       h1= title
       p В HTML существует 2 тега для разметки цитат.
-      h2 Тег q, встроенная цитата
+      h2 Тег q, встроенная цитата.
       p Тег #[b &lt;q&gt;&lt;/q&gt;] (сокращение от «quote») предназначен для выделения цитат внутри предложения. Текст внутри этого тега браузер автоматически обрамляет кавычками, поэтому добавлять кавычки вручную не нужно.
       p Пример:
       pre
@@ -31,7 +31,7 @@ block content
       figure
         blockquote
           | В спецификации говорится: #[q(style='quotes: "„" "“";') The q element represents some phrasing content quoted from another source].
-      h2 Тег blockquote, отдельная цитата
+      h2 Тег blockquote, отдельная цитата.
       p Для выделения длинных цитат, которые могут состоять из нескольких абзацев, предназначен тег #[b &lt;blockquote&gt;&lt;/blockquote&gt;]. Он выделяет цитату не как фрагмент текста в предложении, а как отдельный блок текста с отступами.
       p Пример:
       pre

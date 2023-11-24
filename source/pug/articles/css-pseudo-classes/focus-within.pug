@@ -1,0 +1,23 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс focus-within.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b focus-within] выбирает элемент, если он сам или его потомок находятся в фокусе.
+      p В примере ниже фон для обёртки меняет фоновый цвет на жёлтый, когда ссылка оказывается в фокусе:
+      pre
+        code.
+          &lt;!-- HTML --&gt;
+          &lt;div class="wrapper"&gt;
+            &lt;a href="#"&gt;Ссылка&lt;/a&gt;
+          &lt;/div&gt;
+
+          /* CSS */
+          .wrapper:focus-within {
+            background-color: yellow;
+          }

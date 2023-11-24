@@ -1,7 +1,7 @@
 extends ../../layout/layout
 
 block variables
-  - var title = 'Свойство text-overflow'
+  - var title = 'Свойство text-overflow.'
   - var pageClass = 'article-page'
 
 block content
@@ -18,7 +18,7 @@ block content
       ul
         li Определено максимальное количество строк.
         li Значение свойства #[b overflow] установлено как #[b auto], #[b scroll] или #[b hidden].
-      h2 Пример однострочного текста
+      h2 Пример однострочного текста.
       p Чтобы сделать текст однострочным можно использовать свойство #[b white-space] со значением #[b nowrap]:
       pre
         code.
@@ -33,7 +33,7 @@ block content
           }
       figure
         p(style='width: 200px; padding: 4px 8px; border-radius: 4px; white-space: nowrap; text-overflow: ellipsis; background: lightblue; overflow: hidden;') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      h2 Пример многострочного текста
+      h2 Пример многострочного текста.
       p Чтобы задать максимальное количество строк понадобятся #[b display: -webkit-box], #[b -webkit-box-orient: vertical] и #[b -webkit-line-clamp].
       pre
         code.

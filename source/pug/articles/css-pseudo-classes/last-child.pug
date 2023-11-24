@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс last-child.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b last-child] выбирает последний элемент родителя.
+      p Пример:
+      pre
+        code.
+          li:last-child {
+            ...
+          }
+

@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс nth-last-child.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b nth-last-child] выбирает элемент по порядковому номеру, который отсчитывается с конца.
+      p Также как #[a(href='nth-child.html') nth-child] принимает в качестве аргумента положительное число, ключевое слово или выражение со счётчиком.

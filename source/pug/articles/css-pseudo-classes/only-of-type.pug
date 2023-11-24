@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс only-of-type.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b only-of-type] выбирает элемент, если он является единственным дочерним тегом своего типа.
+      p Пример:
+      pre
+        code.
+          p:only-of-type { ... }
+      p Тег #[b &lt;p&gt;&lt;/p&gt;] будет выбран, если он является единственным параграфом в своём родительском теге.
+      p Селектор #[b :only-of-type] эквивалентен комбинации #[b :first-of-type:last-of-type].

@@ -1,0 +1,32 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс last-of-type.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b last-of-type] выбирает последние теги разных типов среди дочерних.
+      p Пример:
+      pre
+        code.
+          &lt;!-- HTML --&gt;
+          &lt;html&gt;
+            &lt;head&gt;&lt;/head&gt;
+            &lt;body&gt;
+              &lt;div&gt;&lt;/div&gt;
+              &lt;div&gt;&lt;/div&gt;
+              &lt;p&gt;&lt;/p&gt;
+              &lt;p&gt;&lt;/p&gt;
+              &lt;p&gt;&lt;/p&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+
+          /* CSS */
+          :last-of-type {
+            ...
+          }
+      p Будут выбраны теги #[b &lt;html&gt;&lt;/html&gt;], #[b &lt;body&gt;&lt;/body&gt;], второй #[b &lt;div&gt;&lt;/div&gt;] и третий #[b &lt;p&gt;&lt;/p&gt;].
+      p Обычно используется в комбинации с другими селекторами.

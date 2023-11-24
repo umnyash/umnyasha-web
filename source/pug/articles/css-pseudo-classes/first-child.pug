@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс first-child.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b first-child] выбирает первый элемент родителя.
+      p Пример:
+      pre
+        code.
+          li:first-child {
+            ...
+          }

@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс nth-of-type.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b nth-of-type] выбирает теги разных типов по порядковому номеру, который отсчитывается с начала.
+      p Также как #[a(href='nth-child.html') nth-child] принимает в качестве аргумента положительное число, ключевое слово или выражение со счётчиком.

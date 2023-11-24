@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс valid.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p При помощи разных типов полей (#[b email], #[b url] и других) или специфических настроек (#[b pattern], #[b min]/#[b max] и других) можно указать браузеру, какие именно данные мы ожидаем от пользователя в том или ином поле.
+      p Псевдокласс #[b valid] выбирает все поля формы введённое значение которых удовлетворяет заданным требованиям.

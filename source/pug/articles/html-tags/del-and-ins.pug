@@ -1,14 +1,13 @@
 extends ../../layout/layout
 
 block variables
-  - var title = 'Теги del и ins'
+  - var title = 'Теги del и ins.'
   - var pageClass = 'article-page'
 
 block content
   main
     article.article.container
       h1= title
-      h2 Теги del и ins, выделение изменений
       p Для описания изменений предназначены теги #[b &lt;del&gt;&lt;/del&gt;] (сокращение от «delete») и #[b &lt;ins&gt;&lt;/ins&gt;] (сокращение от «insert»).
       p Тег #[b &lt;del&gt;&lt;/del&gt;] выделяет текст, который был удалён в новой версии документа. В браузере этот текст перечёркивается.
       p Тег #[b &lt;ins&gt;&lt;/ins&gt;] выделяет текст, который был добавлен в новой версии документа. В браузере этот текст подчёркивается.

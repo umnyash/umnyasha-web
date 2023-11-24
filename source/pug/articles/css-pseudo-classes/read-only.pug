@@ -1,0 +1,11 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс read-only.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b read-only] выбирает все поля формы, доступные только для чтения (с атрибутом #[b read-only]).

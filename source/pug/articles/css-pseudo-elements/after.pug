@@ -1,0 +1,29 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдоэлемент after.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдоэлемент #[b after] аналогичен #[a(href='before.html') before]. Отличие заключается в том, что он добавляет псевдотег не в начало, а в конец элемента.
+      p Например:
+      pre
+        code.
+          &lt;!-- HTML --&gt;
+          &lt;div class="queen heart"&gt;
+            &lt;em&gt;Дама&lt;/em&gt;
+          &lt;/div&gt;
+
+          /* CSS */
+          .heart::after { content: "Черви"; }
+      p Даст такой результат:
+      pre
+        code.
+          &lt;div class="queen heart"&gt;
+            &lt;em&gt;Дама&lt;/em&gt;
+            &lt;after&gt;Черви&lt;/after&gt;
+          &lt;/div&gt;
+      p Псевдоэлемент #[b after] можно использовать одновременно c #[a(href='before.html') before].

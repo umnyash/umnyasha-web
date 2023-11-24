@@ -1,7 +1,7 @@
 extends ../../layout/layout
 
 block variables
-  - var title = 'Производительность вёрстки'
+  - var title = 'Производительность вёрстки.'
   - var pageClass = 'article-page'
 
 block content
@@ -9,7 +9,7 @@ block content
     article.article.container
       h1= title
       p Поисковики отдают предпочтение быстрым сайтам.
-      h2 Из чего состоит загрузка сайта
+      h2 Из чего состоит загрузка сайта.
       ol
         li Получение IP-адреса по названию домена (DNS).
         li Подключение к серверу по IP-адресу.
@@ -23,14 +23,14 @@ block content
         li Загрузка и выполнение JavaScript-кода.
         li Загрузка изображений.
         li Завершение рендеринга страницы и выполнение отложенного JavaScript-кода.
-      h2 Приоритеты загрузки
+      h2 Приоритеты загрузки.
       ol
         li Highest.
         li High.
         li Medium.
         li Low.
         li Lowest.
-      h3 Предзагрузка ресурсов
+      h3 Предзагрузка ресурсов.
       pre
         code.
           &lt;head&gt;
@@ -39,15 +39,15 @@ block content
             &lt;link rel="preload" href="/img/bg-header@2x.jpg" as="image"&gt;
             &lt;link rel="preload" href="/fonts/psans-narrow.woff2" as="font" type="font/woff2" crossorigin&gt;
           &lt;/head&gt;
-      h2 Ленивая загрузка для img и iframe
+      h2 Ленивая загрузка для img и iframe.
       pre
         code.
           &lt;img src="files/cat.jpg" loading="lazy" alt="Небольшой серый кот."&gt;
       p #[a(href='https://caniuse.com/loading-lazy-attr' target='_blank' rel='nofollow noopener') Поддержка].
-      h3 Скорость страницы
+      h3 Скорость страницы.
       p #[a(href='https://pagespeed.web.dev' target='_blank' rel='nofollow noopener') PageSpeed Insights].
       p #[a(href='https://www.webpagetest.org' target='_blank' rel='nofollow noopener') Web Page Test] проверяет на реальных устройствах.
-      h2 Общие рекомендации
+      h2 Общие рекомендации.
       ul
         li Помнить про блокирующие ресурсы.
         li Уменьшать размер всего.

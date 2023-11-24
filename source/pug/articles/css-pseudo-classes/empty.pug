@@ -1,0 +1,17 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс empty.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b empty] выбирает пустые теги: те у которых нет ни дочерних элементов, ни текста внутри.
+      p Пример:
+      pre
+        code.
+          div:empty { ... }
+      p В данном случае будут выбраны все пустые #[b &lt;div&gt;&lt;/div&gt;].
+      p Учтите, что даже переход на новую строку считается текстовым узлом, помните об этом в процессе проектирования структуры страницы.

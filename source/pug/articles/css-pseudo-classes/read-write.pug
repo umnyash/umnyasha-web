@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс read-write.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b read-write] выбирает все поля формы без атрибута #[b read-only].
+      p Несмотря на название — «чтение-запись», этот псевдокласс выберет в том числе заблокированные поля, недоступные для ввода.

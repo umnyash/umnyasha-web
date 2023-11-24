@@ -1,0 +1,32 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс first-of-type.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b first-of-type] выбирает первые теги разных типов среди дочерних.
+      p Пример:
+      pre
+        code.
+          &lt;!-- HTML --&gt;
+          &lt;html&gt;
+            &lt;head&gt;&lt;/head&gt;
+            &lt;body&gt;
+              &lt;div&gt;&lt;/div&gt;
+              &lt;div&gt;&lt;/div&gt;
+              &lt;p&gt;&lt;/p&gt;
+              &lt;p&gt;&lt;/p&gt;
+              &lt;p&gt;&lt;/p&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+
+          /* CSS */
+          :first-of-type {
+            ...
+          }
+      p Будут выбраны теги #[b &lt;html&gt;&lt;/html&gt;], #[b &lt;body&gt;&lt;/body&gt;], первый #[b &lt;div&gt;&lt;/div&gt;] и первый #[b &lt;p&gt;&lt;/p&gt;].
+      p Обычно используется в комбинации с другими селекторами.

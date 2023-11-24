@@ -1,14 +1,14 @@
 extends ../../layout/layout
 
 block variables
-  - var title = 'Рамки'
+  - var title = 'Рамки.'
   - var pageClass = 'article-page'
 
 block content
   main
     article.article.container
       h1= title
-      h2 Рамка
+      h2 Рамка.
       ul
         li #[a(href='../css-properties/border-width.html') border-width] — ширина.
         li #[a(href='../css-properties/border-style.html') border-style] — вид.
@@ -24,7 +24,7 @@ block content
         li #[a(href='../css-properties/border-image-repeat.html') border-image-repeat] — режим заполнения.
         li #[a(href='../css-properties/border-image.html') border-image] — составное свойство (source slice width outset repeat).
       p Свойство #[a(href='../css-properties/border-radius.html') border-radius] не влияет на фоновое изображение рамки, так что единственный способ сделать округлую рамку — использовать круглую картинку.
-      h3 Установка рамки с отдельной стороны
+      h3 Установка рамки с отдельной стороны.
       p Каждая из сторон border-рамки может иметь свои толщину, вид и цвет, или вовсе отсутствовать. Для такой настройки существуют следующие свойства:
       ul
         li #[b border-top] — рамка сверху.
@@ -41,7 +41,7 @@ block content
       li #[b border-right-width], #[b border-right-style], #[b border-right-color].
       li #[b border-bottom-width], #[b border-bottom-style], #[b border-bottom-color].
       li #[b border-left-width], #[b border-left-style], #[b border-left-color].
-      h4 Треугольники из рамок
+      h4 Треугольники из рамок.
       p У рамок есть одна особенность: если рамка элемента широкая, а сам элемент имеет нулевую ширину и высоту, то стороны рамки становятся треугольными.
       p
         img(src='../../img/triangles-from-frames.png' width='375' height='200' alt='')
@@ -57,7 +57,7 @@ block content
         li Задать нулевую ширину противоположной стороне рамки и ещё одной.
         li Последнюю сторону сделать прозрачной.
       p Стрелки выгодно делать с помощью рамок, потому что таким стрелкам можно легко менять пропорции, задавать разные цвета и размеры.
-      h2 Внешняя рамка
+      h2 Внешняя рамка.
       p Внешняя рамка всегда отображается снаружи элемента, не влияет на его размер и не занимает места.
       P Она подстраивается под форму элемента во всех браузерах кроме Safari, где отображается прямоугольной.
       ul

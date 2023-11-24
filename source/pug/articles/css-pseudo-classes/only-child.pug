@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Псевдокласс only-child.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Псевдокласс #[b only-child] выбирает элемент, если он является единственным в своём родительском теге.
+      p Например, этот тег #[b &lt;li&gt;&lt;/li&gt;], будет выбран, если он единственный в списке:
+      pre
+        code.
+          li:only-child { ... }
+      p Селектор #[b :only-child] эквивалентен комбинации #[b :first-child:last-child].
