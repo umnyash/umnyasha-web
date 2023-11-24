@@ -1,0 +1,9 @@
+<!DOCTYPE html><html class="page" lang="ru"><head><meta charset="utf-8"><title>Псевдоэлемент before.</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="../../css/style.min.css"></head><body class="page__body"><div class="page__inner"><header class="page-header"><div class="container"><a class="logo" href="../../index.html">Umnyasha Web</a></div></header><main><article class="article container"><h1>Псевдоэлемент before.</h1><p>Псевдоэлемент <b>before</b> позволяет с помощью CSS добавить <i>псевдотег</i> внутрь другого элемента и оформить его.</p><p>Содержимое псевдотега задаётся с помощью свойства <b>content</b>.</p><p>Например, у нас есть такой HTML:</p><pre><code>&lt;div class="queen heart"&gt;
+  &lt;em&gt;Дама&lt;/em&gt;
+&lt;/div&gt;</code></pre><p>Добавим CSS-правило для псевдоэлемента:</p><pre><code>.heart::before { content: "Черви"; }</code></pre><p>И HTML изменится вот так:</p><pre><code>&lt;div class="queen heart"&gt;
+  &lt;before&gt;Черви&lt;/before&gt;
+  &lt;em&gt;Дама&lt;/em&gt;
+&lt;/div&gt;</code></pre><p>Но! Исходный HTML-код не изменится, тег <b>&lt;before&gt;&lt;/before&gt;</b> не попадёт в код страницы, а будет «виртуально» существовать где-то в браузере. Поэтому мы и используем приставку <i>псевдо</i>.</p><p>Ведёт себя псевдотег так же, как обычный <b>&lt;span&gt;&lt;/span&gt;</b> с текстом. Ему можно задавать дополнительные стили.</p><p>Например:</p><pre><code>.heart::before {
+  content: "Черви";
+  color: red;
+}</code></pre><p>Чтобы псевдоэлемент появился, ему необходимо задать свойство <b>content</b>. В значении достаточно даже пустой строки <b>""</b>:</p><pre><code>content: "";</code></pre><p>Псевдоэлемент <b>before</b> можно использовать одновременно c <a href="after.html">after</a>.</p></article></main><footer class="page-footer"><div class="container">=^-^=</div></footer></div></body></html>

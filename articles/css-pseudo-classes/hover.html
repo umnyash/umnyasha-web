@@ -1,0 +1,9 @@
+<!DOCTYPE html><html class="page" lang="ru"><head><meta charset="utf-8"><title>Псевдокласс hover.</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="../../css/style.min.css"></head><body class="page__body"><div class="page__inner"><header class="page-header"><div class="container"><a class="logo" href="../../index.html">Umnyasha Web</a></div></header><main><article class="article container"><h1>Псевдокласс hover.</h1><p>Пссевдокласс <b>hover</b> выбирает элемент, на который наведён курсор мыши.</p><p>Примеры:</p><pre><code>a:hover { ... }
+tr:hover { ... }
+.menu-item:hover { ... }</code></pre><p>Первый селектор выбирает ссылку, второй строку таблицы, третий элемент с классом <b>menu-item</b>, но только в том случае, если на них наведён курсор мыши.</p><p>Благодаря этому псевдоклассу можно добавлять в интерфейс динамику и интерактивность, так как элементы начинают реагировать на действия пользователя, изменяя свой внешний вид.</p><h2>Динамические эффекты с помощью hover.</h2><p>Львиная доля динамических эффектов, создаваемых с помощью CSS, опираются на несколько псевдоклассов, главный из которых <b>hover</b>. Весь секрет заключается в сочетании контекстных селекторов и псевдоклассов.</p><h3>Создание выпадающего меню с помощью CSS.</h3><pre><code>li.top ul.submenu {
+  display: none;
+}
+
+li.top:hover ul.submenu {
+  display: block;
+}</code></pre><p>Первое правило прячет список-подменю. Второе правило означает: «показать подменю, если на верхний пункт меню, в котором оно находится, наведён курсор». Вот так всё просто.</p><P>Общий принцип такой: родительский элемент реагирует на наведение мыши и изменяет свойства элементов-потомков. То есть всё работает на контекстных селекторах вида <b>селектор-1:hover селектор-2</b>.</P></article></main><footer class="page-footer"><div class="container">=^-^=</div></footer></div></body></html>
