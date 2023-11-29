@@ -1,2 +1,2 @@
 mixin logo
-  a.logo(href= pageClass === 'index-page' ? false : '../../index.html')&attributes(attributes) Umnyasha Web
+  a.logo(href= pageClass === 'index-page' ? false : pageClass === 'article-page' ? '../../index.html' : 'index.html')&attributes(attributes) Umnyasha Web
