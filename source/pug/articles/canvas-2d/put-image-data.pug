@@ -1,0 +1,13 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод putImageData.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      P Метод #[b putImageData(imageData, dx, dy)] — на основе пиксельных данных расположить на холсте прямоугольную область, верхний левый угол которой расположен в позиции (#[b dx], #[b dy]).
+      p При этом происходит замена пикселей, а не простая отрисовка.
+      p Если область выходит за пределы холста, пикселям за пределами холста задаётся прозрачный чёрный цвет (#[b rgba(0, 0, 0, 0)]).

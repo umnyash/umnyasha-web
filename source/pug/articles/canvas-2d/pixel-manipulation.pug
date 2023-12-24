@@ -1,0 +1,22 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Манипуляции с пикселями.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      p Объект #[b imageData] содержит пиксельные данные об участке холста.
+      p Свойства объекта:
+      ul
+        li #[b width] — ширина участка холста.
+        li #[b height] — высота участка холста.
+        li #[b data] — Uint8ClampedArray. Одномерный массив содержащий RGBA-данные о пикселях с целочисленными значениями от #[b 0] до #[b 255] включительно. Информация о пикселях хранится по их порядке слева направо и сверху вниз.
+      p Использование #[b imageData].
+      ul
+        li #[a(href='create-image-data.html') createImageData] — создать новый объект #[b imageData].
+        li #[a(href='get-image-data.html') getImageData] — вернуть #[b imageData] с данными о пикселях холста.
+        li #[a(href='put-image-data.html') putImageData] — расположить на холсте пиксели из #[b imageData].
+      p Холст можно сохранить в качестве изображения с помощью метода #[em холста] — #[a(href='to-data-url.html') toDataURL].

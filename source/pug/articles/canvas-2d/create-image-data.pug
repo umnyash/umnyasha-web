@@ -1,0 +1,20 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод createImageData.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      P Метод #[b createImageData] создаёт новый объект #[b ImageData] с заданными размерами. Цвет пикселей будет назначен как прозрачный чёрный (#[b rgba(0, 0, 0, 0)]).
+      ul
+        li #[b createImageData(width, height)] — создать #[b ImageData] c шириной #[b width] и высотой #[b height].
+        li #[b createImageData(imageData)] — создать #[b ImageData] с шириной и высотой, как у переданного объекта #[b ImageData]. Само изображение не копируется.
+        li #[b createImageData(width, height, settings)] — создать #[b ImageData] c шириной #[b width] и высотой #[b height] и с заданными настройками #[b settings].
+      p Настройки #[b settings] представлены объектом с единственным свойством — #[b colorSpace], которое задаёт пространство цветов.
+      p Значения:
+      ul
+        li #[b 'srgb'] — (по умолчанию).
+        li #[b 'display-p3'].

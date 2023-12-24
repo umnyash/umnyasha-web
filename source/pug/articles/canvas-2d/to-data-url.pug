@@ -1,0 +1,22 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод toDataURL.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      P Метод холста #[b toDataURL(type, encoderOptions)] — возвращает URL-адрес данных, содержащий представление изображения в указанном формате #[b type].
+      p #[b type] — необязательный аргумент, задаёт тип изображения.
+      p Значения:
+      ul
+        li #[b 'image/png'] — (по умолчанию).
+        li #[b 'image/jpg'].
+        li #[b 'image/webp'].
+      p #[b encoderOptions] — необязательный аргумент, задаёт качество изображения, которое будет использоваться при создании изображений в форматах, поддерживающих сжатие с потерями, например, JPG или WebP.
+      p Значения:
+      ul
+        li Число от #[b 0] до #[b 1].
+      p Значение по умолчанию используется, если аргумент не передан или некорректен.

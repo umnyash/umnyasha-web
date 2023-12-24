@@ -39,11 +39,26 @@ block content
             &lt;link rel="preload" href="/img/bg-header@2x.jpg" as="image"&gt;
             &lt;link rel="preload" href="/fonts/psans-narrow.woff2" as="font" type="font/woff2" crossorigin&gt;
           &lt;/head&gt;
-      h2 Ленивая загрузка для img и iframe.
+      h3 Ленивая загрузка для img и iframe.
       pre
         code.
           &lt;img src="files/cat.jpg" loading="lazy" alt="Небольшой серый кот."&gt;
       p #[a(href='https://caniuse.com/loading-lazy-attr' target='_blank' rel='nofollow noopener') Поддержка].
+      h3 Оптимизация изображений.
+      h4 Оптимизация растровых изображений.
+      p #[a(href='https://squoosh.app' target='_blank' rel='nofollow noopener') Squoosh] — онлайн-сервис для оптимизации растровых изображений.
+      p Рекомендуемые параметры:
+      ul
+        li progressive
+        li quality: ~75
+      h4 Оптимизация векторных изображений.
+      p #[a(href='https://svgomg.net' target='_blank' rel='nofollow noopener') SVGOMG] — онлайн-сервис для оптимизации векторных изображений.
+      p Рекомендуемые параметры:
+      ul
+        li Precision (точность): 2
+      h3 Минификаторы кода.
+      ul
+        li #[a(href='https://css.github.io/csso/csso.html' target='_blank' rel='nofollow noopener') CSSO] — минификатор CSS.
       h3 Скорость страницы.
       p #[a(href='https://pagespeed.web.dev' target='_blank' rel='nofollow noopener') PageSpeed Insights].
       p #[a(href='https://www.webpagetest.org' target='_blank' rel='nofollow noopener') Web Page Test] проверяет на реальных устройствах.

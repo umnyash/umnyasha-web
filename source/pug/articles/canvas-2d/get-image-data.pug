@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Метод getImageData.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      P Метод #[b getImageData(left, top, width, height)] — вернуть объект #[b ImageData] с данными о пикселях для прямоугольной области холста шириной #[b width] и высотой #[b height], верхний левый угол которой расположен в позиции #[b left] #[b top].
+      p Если область выходит за пределы холста, пикселям за пределами холста задаётся прозрачный чёрный цвет (#[b rgba(0, 0, 0, 0)]).
