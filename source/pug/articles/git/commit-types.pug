@@ -1,0 +1,25 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Типы коммитов.'
+  - var pageClass = 'article-page'
+
+block content
+  main
+    article.article.container
+      h1= title
+      ul
+        li #[b init] — добавить начальные файлы нового проекта.
+        li #[b build] — всё, что влияет на сборку (webpack, vite, babel, tsconfig, сборочные скрипты).
+        li #[b ci] — всё, что связано ci/cd.
+        li #[b docs] — документация (README, комментарии, markdown).
+        li #[b chore] — рутинные/автоматизированные задачи, такие как обновление зависимостей.
+        li #[b feat] — добавление новых функциональных возможностей.
+        li #[b fix] — исправление ошибок и багов.
+        li #[b perf] — ускорение, оптимизация (мемоизация, уменьшение рендеров, кеши).
+        li #[b types] — изменения типов TypeScript.
+        li #[b refactor] — рефакторинг.
+        li #[b style] — стиль кода, форматирование (пробелы, отступы, prettier, eslint --fix).
+        li #[b test] — всё, что связано с тестами (добавил, переписал, починил тесты).
+        li #[b deprecate] — для коммитов, которые делают функциональность устаревшей.
+        li #[b release] — для коммитов, связанных с выпуском новой версии.
